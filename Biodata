@@ -1,0 +1,20 @@
+// BIODATA  THIS MY SECOND PROGRAM
+//MAKE CLASS
+import java.util.*;
+class Biodata
+{
+   public static void main(String[] args)
+    {
+        Scanner u=new Scanner(System.in);
+        System.out.println("Enter You'r name:");
+        String name=u.next();
+        System.out.println("Enter You'r age:");
+        int age=u.nextInt();
+        System.out.println("Enter you'r cgpa: ");
+        float cgpa=u.nextFloat();
+        System.out.println("Name:"+name);
+        System.out.println("Age:"+age);
+        System.out.println("CGPA:"+cgpa);
+    }
+    
+};
