@@ -1,0 +1,17 @@
+//Use of Unary operator ~ and !
+class Unary_Operator
+{
+    static public void main (String...arg)
+    {
+        
+       int a= 10;
+       int b=-12;
+       boolean c=false;
+       Boolean d=true;
+       
+       System.out.println(~a);// -11(minus of total positive value which starts from 0)
+       System.out.println(~b);//11(positive of total minus, positive starts from 0)
+       System.out.println(!c);
+       System.out.println(!d);
+    }
+}
