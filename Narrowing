@@ -1,0 +1,12 @@
+
+class narrowing
+{
+    static public void main (String...arg)
+    {
+        
+        float b=12.2f;
+        int a=(int)b;
+        System.out.println(b); // 12.2
+        System.out.println(a);// 12
+    }
+}
