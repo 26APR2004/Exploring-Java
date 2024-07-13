@@ -1,0 +1,10 @@
+class widening
+{
+    static public void main (String[]arg)
+    {
+        int a=23;
+        float b=a;
+        System.out.println(a); // 23
+        System.out.println(b);// 23.0
+    }
+}
