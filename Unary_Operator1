@@ -1,0 +1,12 @@
+class Unary_Operator
+{
+    static public void main (String...arg)
+    {
+        
+       int a= 10;
+       int b=12;
+       System.out.println(a++ + ++a);// 10(11)+12=22
+       System.out.println(b-- - --b);//12(11)-10=2
+      
+    }
+}
