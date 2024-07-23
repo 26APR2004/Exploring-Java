@@ -1,0 +1,9 @@
+class Maximum
+{
+    static public void main(String...args)
+    {
+        int a=8;
+        int b=2;
+        System.out.println(Math.max(a,b));
+    }
+}
