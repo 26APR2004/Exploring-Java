@@ -1,0 +1,23 @@
+class student {
+  int math, physics, chemistry;
+
+  student(int math, int physics, int chemistry) // constructor
+  {
+    this.math = math;
+    this.physics = physics;
+    this.chemistry = chemistry;
+  }
+
+  double inPercentage() {
+   double totalmarks=math+physics+chemistry;
+    return ((totalmarks / 300)*100);
+  }
+
+}
+
+class StudentDemo {
+  static public void main(String args[]) {
+    student s1 = new student(90, 80, 70);
+    System.out.println("Student got:"+s1.inPercentage()+"%");
+  }
+}
