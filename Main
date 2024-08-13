@@ -1,0 +1,49 @@
+// Multiclass program
+class circle // class 1
+{
+  double x, y;
+  double r;
+
+  double circumferance() {
+    return 2 * 3.14 * r;
+  }
+
+  double area() {
+    return 3.14 * r * r;
+  }
+}
+
+class Box // class 2
+{
+  double width;
+  double height;
+  double depth;
+
+  double area() {
+    double a;
+    a = (width * height + height * depth + width * depth) * 2;
+    return a;
+  }
+
+  double volume() {
+    double b = width * height * depth;
+    return b;
+  }
+}
+
+class Main {
+  public static void main(String args[]) {
+    circle c1 = new circle(); // object of class 1
+    Box b1 = new Box(); // object of class 2
+    c1.x = 0;
+    c1.y = 0;
+    c1.r = 5;
+    b1.width = 10;
+    b1.height = 10;
+    b1.depth = 10;
+    System.out.println("circumferance of circle is " + c1.circumferance());
+    System.out.println("area of circle is " + c1.area());
+    System.out.println("area of box is :" + b1.area());
+    System.out.println("Volume of box is :" + b1.volume());
+  }
+}
