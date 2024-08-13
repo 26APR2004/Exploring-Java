@@ -1,0 +1,44 @@
+import java.util.*;
+class employee
+{
+    private String first_name;
+    private String last_name;
+    private double salary;
+    
+    void employee(String fs,String ls,double sal)
+    {
+        this.first_name=fs;
+        this.last_name=ls;
+        this.salary=sal;
+    }
+    void risingsal()
+    {
+      
+        if(salary>0)
+         salary= salary+(salary*0.10);
+         else
+         salary= 0.0;
+    }
+    
+    void display()
+    {
+        System.out.println( "First employee name :"+first_name);
+        System.out.println("last employee name :"+last_name);
+        System.out.printf("First employee salary:%,.3f",salary);
+    }
+    
+    public static void main(String[]args)
+    {   Scanner sc=new Scanner(System.in);
+        employee e1=new employee();
+        System.out.println("Enter the first name:");
+        String fname=sc.nextLine();
+        System.out.println("Enter the last name:");
+        String lname=sc.nextLine();
+        System.out.println("Enter the salary:");
+        int salary=sc.nextInt();
+        e1.employee(fname,lname, salary);
+        e1.risingsal();
+        e1.display();
+    }
+    
+}
