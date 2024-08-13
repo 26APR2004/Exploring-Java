@@ -1,0 +1,45 @@
+//  Use of multiple constructors
+class student {
+  int math, physics, chemistry;
+
+  student(int math, int physics, int chemistry) // 1constructor
+  {
+    this.math = math;
+    this.physics = physics;
+    this.chemistry = chemistry;
+  }
+
+  student(int math) // 2constructor
+  {
+    this(80, 0, 0);
+  }
+
+  student(student s1) // 3constructor
+  {
+    this(s1.math, s1.physics, s1.chemistry);
+  }
+
+  student() // 4constructor
+  {
+    this(0, 0, 1);
+  }
+
+  double inPercentage() {
+    double totalmarks = math + physics + chemistry;
+    return ((totalmarks / 300) * 100);
+  }
+
+}
+
+class MultipleConstructor {
+  static public void main(String args[]) {
+    student s1 = new student(90, 80, 70);
+    student s2 = new student(70);
+    student s3 = new student(s1);
+    student s4 = new student();
+    System.out.println("Student got:" + s1.inPercentage() + "%");
+    System.out.println("Student got:" + s2.inPercentage() + "%");
+    System.out.println("Student got:" + s3.inPercentage() + "%");
+    System.out.println("Student got:" + s4.inPercentage() + "%");
+  }
+}
