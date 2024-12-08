@@ -1,0 +1,14 @@
+package com.company;
+//Java program to convert kilometer to miles.
+import java.util.Scanner;
+public class Kilometer_to_mile {
+ public static void main(String[]args)
+ {
+	 Scanner sc=new Scanner(System.in);
+	 System.out.println("Enter the Kilometer value:");
+	 float kilometer=sc.nextFloat();
+	 float mile=kilometer*0.621371f;
+	 System.out.println("Mile:"+mile+" mile");
+	 
+ }
+}
