@@ -1,0 +1,13 @@
+package com.company;
+//Java program to detect whether a number entered by the user is integer or not.
+import java.util.Scanner;
+public class ToCheckValueIsINT {
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the value:");
+		System.out.println(sc.hasNextInt());
+		
+	}
+
+}
