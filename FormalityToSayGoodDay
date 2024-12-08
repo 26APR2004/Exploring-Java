@@ -1,0 +1,13 @@
+package com.company;
+// Java program which ask the user to enter his\her name and return them with "Hello <name>,have good day" text.
+import java.util.Scanner;
+public class FormalityToSayGoodDay {
+
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("What is your name:");
+		String name=sc.next();
+		System.out.print("Hello "+name+",have good day.");
+	}
+}
