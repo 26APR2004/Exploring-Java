@@ -1,0 +1,24 @@
+package com.company;
+import java.util.Scanner;
+public class MarksCalculation {
+
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the outoff marks:");
+		int out_of_marks=sc.nextInt();
+		System.out.print("Enter the 1st subject marks:");
+		float s1=sc.nextFloat();
+		System.out.print("Enter the 2nd subject marks:");
+		float s2=sc.nextFloat();
+		System.out.print("Enter the 3rd subject marks:");
+		float s3=sc.nextFloat();
+		System.out.print("Enter the 4th subject marks:");
+		float s4=sc.nextFloat();
+		System.out.print("Enter the 5th subject marks:");
+		float s5=sc.nextFloat();
+		 float total=s1+s2+s3+s4+s5;
+		float marks_percentage =(total/500)*100;
+		System.out.println("Marks you got in % :"+marks_percentage);
+	}
+}
