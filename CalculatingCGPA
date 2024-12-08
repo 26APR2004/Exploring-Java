@@ -1,0 +1,20 @@
+package com.company;
+import java.util.Scanner;
+// Java program to display the CGPA 
+public class CalculatingCGPA {
+
+	public static void main(String[]args)
+	{
+			Scanner sc=new Scanner(System.in);
+			System.out.print("Enter the 1st Subject marks: ");
+			float subject_1=sc.nextFloat();
+			System.out.print("Enter the 2nd Subject marks: ");
+			float subject_2=sc.nextFloat();
+			System.out.print("Enter the 3rd Subject marks: ");
+			float subject_3=sc.nextFloat();
+			//float AVG=(subject_1+subject_2+subject_3)/3;
+			//float CGPA=AVG/10;
+			float CGPA=(subject_1+subject_2+subject_3)/30;
+			System.out.print("CGPA IS: "+CGPA);
+	}
+}
