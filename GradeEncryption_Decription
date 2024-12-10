@@ -1,0 +1,17 @@
+package com.company;
+
+/* Q. Writ java program to encrypt a grade by adding 8 to it.Decrypt it to show the correct grade.*/
+public class GradeEncryption_Decription {
+	public static void main(String...args)
+	{
+	    // increment by 8
+		char grade='A';
+		grade=(char)(grade+8);
+		System.out.println("Fack grade: "+grade);
+		// decrement by 8
+		grade=(char)(grade-8);
+		System.out.println("Actually grade: " +grade);
+		
+	}
+
+}
