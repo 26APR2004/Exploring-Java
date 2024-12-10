@@ -1,0 +1,13 @@
+package com.company;
+import java.util.Scanner;
+public class UsernumberVerification {
+	
+	public static void main(String...args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		int number=sc.nextInt();
+		System.out.println(number>8); //  greater the it will display "TRUE" else"FALSE".
+	}
+
+}
