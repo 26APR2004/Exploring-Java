@@ -1,0 +1,19 @@
+package com.company;
+/*Q.3 Write java program to to fill in letter template which looks like: 
+  "Dear <|name|>, Thanks a lot" 
+ replace name with your name.
+ */
+public class NameReplaceInLetter {
+	public static void main(String[]args) {
+		
+		String letter="Dear <|name|>, Thanks a lot";
+		
+	     letter=letter.replace("<|name|>","Sujal");
+	     System.out.println(letter);
+	}
+	
+		
+	
+		
+
+}
