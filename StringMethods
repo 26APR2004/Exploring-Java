@@ -1,0 +1,26 @@
+package com.company;
+
+public class StringMethods {
+	public static void main(String[]args)
+	{
+		String name=" Sujal Mane";
+		
+		System.out.println(name.length());
+		System.out.println(name.toLowerCase());
+		System.out.println(name.toUpperCase());
+		System.out.println(name.trim());
+		System.out.println(name.substring(2));
+		System.out.println(name.substring(2,5));
+		System.out.println(name.replace('S','N'));
+		System.out.println(name.replace("Sujal","Sahil"));
+		System.out.println(name.startsWith(" Su"));
+		System.out.println(name.startsWith("ane"));
+		System.out.println(name.charAt(1));
+		System.out.println(name.indexOf("u"));
+		System.out.println(name.lastIndexOf("j"));
+		System.out.println(name.equals(" Sujal Mane"));
+		System.out.println(name.equalsIgnoreCase(" sujal mane"));
+		System.out.println("Hello \sujal\"");
+	}
+
+}
