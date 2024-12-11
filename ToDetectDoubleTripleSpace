@@ -1,0 +1,10 @@
+package com.company;
+//Q.4 Write java program to detect double and triple spaces in string.
+public class ToDetectDoubleTripleSpace {
+ public static void main(String[]args)
+ {
+	 String Sentance="Write java program to  detect double and   triple spaces in string.";
+	 System.out.println(Sentance.indexOf("  "));
+	 System.out.println(Sentance.indexOf("   "));
+ }
+}
