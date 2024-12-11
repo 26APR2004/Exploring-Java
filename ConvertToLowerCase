@@ -1,0 +1,11 @@
+package com.company;
+// Q.1.Write Java program to convert string to lower case 
+public class ConvertToLowerCase {
+
+public static void main(String[]args)
+{
+	String Sentance="Hello SUJAL Whatsapp!";
+	
+	System.out.println(Sentance.toLowerCase());
+}
+}
