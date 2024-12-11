@@ -1,0 +1,25 @@
+package com.company;
+import java.util.Scanner;
+public class GradeDescriptionDisplay {
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your grade:");
+		String grade=sc.next();
+		
+		switch(grade)
+		{
+		case "A":
+			System.out.println("Excellent");
+			break;
+		case "B":
+			System.out.println("Good");
+			break;
+		default:
+			System.out.println("Not specified!");
+			break;
+		}
+		sc.close();
+	}
+
+}
