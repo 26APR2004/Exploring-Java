@@ -1,0 +1,9 @@
+package com.company;
+// Q.2 Write java program to replace space with underscore .
+public class ReplaceMethode {
+    public static void main(String[]args)
+    {
+    	String Sentance="Hello Brro Whatsapp!";
+    	System.out.println(Sentance.replace(" ", "_"));
+    }
+}
