@@ -1,0 +1,34 @@
+/*
+ *  Write program to find out the type of website from the url
+ *    .com->Commercial Website
+ *    .org->Organisation Website
+ *    .in->ndian Website
+ */
+package com.company;
+import java.util.Scanner;
+public class Detection_of_Website {
+ public static void main(String...args)
+ {
+	 Scanner sc=new Scanner(System.in);
+	 System.out.print("Enter the website:");
+	 String web=sc.nextLine();
+	 
+	 if(web.endsWith(".com"))
+	 {
+		 System.out.println("This Is Commercial Website"); 	
+	 }
+	 else if(web.endsWith(".org"))
+	 {
+		 System.out.println("This Is Organisation Website"); 
+	 }
+	 else if(web.endsWith(".in"))
+	 {
+		 System.out.println("This Is Indian Website"); 
+	 }
+	 else
+	 {
+		 System.out.println("This Is Unknown Website"); 
+	 }
+	 
+ }
+}
