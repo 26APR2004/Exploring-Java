@@ -1,0 +1,77 @@
+package com.company;
+import java.util.Random;
+import java.util.Scanner;
+public class RockPaperScissorGame {
+ public static void main(String[]args)
+ {
+	 Random rd=new Random( );
+	 Scanner sc=new Scanner(System.in);
+	 
+	 int random_no=rd.nextInt(3);
+	 //System.out.println(random_no);
+	 System.out.print("Enter player name:");
+	 String name=sc.nextLine();
+	 System.out.println("Instructions:\n \"0\" for \"Rock\"\n \"1\" for \"Paper\"\n \"2\" for \"Scissor\"");
+	 System.out.println("How may rounds you want to play:"); 
+	 int rounds=sc.nextInt();
+	 System.out.println("--------------------#Start game #---------------------");
+	 int i=0;
+	 while(i<rounds)
+	 {
+	 System.out.println("Enter your choice:");
+	 int player_no=sc.nextInt();
+	 if(player_no==0 && random_no==1 )
+	 {
+		 System.out.println(" Rock vs Paper "); 
+		 System.out.println("Paper is winner ,So it means you WIN!"); 
+	 }
+	 else if(player_no==0 && random_no==2)
+	 {
+		 System.out.println(" Rock vs Scissor ");
+		 System.out.println("Rock is winner ,So it means you WIN!"); 
+	 }
+	 else if(player_no==0 && random_no==0)
+	 {
+		 System.out.println(" Rock vs Rock ");
+		 System.out.println("@Tie@"); 
+	 }
+	 else if(player_no==1 && random_no==1)
+	 {
+		 System.out.println(" Paper vs Paper ");
+		 System.out.println("@Tie@"); 
+	 }
+	 else if(player_no==1 && random_no==2)
+	 {
+		 System.out.println(" Paper vs scissor ");
+		 System.out.println("Scissor is winner ,So it means you Lossss!"); 
+	 }
+	 else if(player_no==1 && random_no==0)
+	 {
+		 System.out.println("  Paper vs Rock ");
+		 System.out.println("Paper is winner ,So it means you WIN!"); 
+	 }
+	 else if(player_no==2&& random_no==2)
+	 {
+		 System.out.println(" Scissor vs Scissor ");
+		 System.out.println("@Tie@"); 
+	 }
+	 else if(player_no==2 && random_no==1)
+	 {
+		 System.out.println(" scissor vs paper ");
+		 System.out.println("Paper is winner ,So it means you Loss!"); 
+	 }
+	 else if(player_no==2 && random_no==0)
+	 {
+		 System.out.println(" Scissor vs Rock ");
+		 System.out.println("Rock is winner ,So it means you Loss!"); 
+	 }
+	 else
+	 {
+		 System.out.println("Invalid Input!"); 
+	 }
+	 System.out.println(); 
+	 i++;
+	 }
+	 
+ }
+}
