@@ -1,0 +1,13 @@
+// Write Java program print first n natural numbers in reverse order.
+package com.company;
+
+public class NaturalNumbers_ReverseOrder {
+public static void main(String[]args)
+{
+	int n=10;
+	for(int i=n;i>=0;i--)
+	{
+		System.out.println(i);
+	}
+}
+}
