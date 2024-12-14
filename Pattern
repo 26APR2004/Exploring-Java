@@ -1,0 +1,32 @@
+/*Write a program to print the following pattern by using while loop
+ 
+    * * * * *
+    * * * *
+    * * *
+    * *
+    * 
+ */
+
+package com.company;
+import java.util.Scanner;
+public class Pattern {
+public static void main(String []args)
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the value of n:");
+	int n=sc.nextInt();
+	int i=0;
+	while(i<n)
+	{
+		int j=n;
+		while(j>i)
+		{
+			System.out.print("*");
+			j--;
+		}
+		i++;
+		System.out.println( );
+			
+	}
+}
+}
