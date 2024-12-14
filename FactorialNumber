@@ -1,0 +1,24 @@
+// Write a program to find factorial of a given number using for loop/ while loop.
+package com.company;
+import java.util.Scanner;
+public class FactorialNumber {
+ public static void main(String...args)
+ {
+	 Scanner sc=new Scanner(System.in);
+	 System.out.println("Enter the number:");
+	 int n=sc.nextInt();
+	 int Factorial=1;
+	 /*for(int i=n;i>=1;i--)
+	 {
+		 Factorial*=i;
+	 }
+	 System.out.printf("Factorial of %d number is:%d",n,Factorial);
+ }*/
+ int i=1;
+ while(i<=n)
+ {
+	 Factorial*=i;
+	 i++;
+ }
+ System.out.printf("Factorial of %d number is:%d",n,Factorial);
+}}
