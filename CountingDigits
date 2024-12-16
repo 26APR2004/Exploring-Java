@@ -1,0 +1,23 @@
+//Java program to counting digits in number
+package com.company;
+import java.util.Scanner;
+public class CountingDigits {
+	static int ContingDigits(int n)
+	{
+		 int counter=0;
+	     while(n>0)
+	     {
+	    	 counter++;
+	    	 n=n/10;
+	     }
+	     return counter;
+	}
+ public static void main(String[]args)
+ {
+	 Scanner sc=new Scanner(System.in);
+     System.out.print("Enter the number:");
+     int N=sc.nextInt();
+     int counter=ContingDigits(N);
+     System.out.printf("Number of Digits in %d integer number:%d",N,counter);
+	 }
+}
