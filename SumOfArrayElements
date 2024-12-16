@@ -1,0 +1,22 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class SumOfArrayElements {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        int []arr=new int [5];
+        System.out.println("Enter the elements of arr:");
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        
+        // sum of elements in arr
+        int sum=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            sum+=arr[i];
+        }
+        System.out.println("Sum of elements:"+sum);
+    }
+}
