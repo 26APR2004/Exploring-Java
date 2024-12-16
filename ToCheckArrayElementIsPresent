@@ -1,0 +1,24 @@
+// write program to find out weather a given element is present or not;
+package com.company;
+
+public class ToCheckArrayElementIsPresent {
+	public static void main(String[]args) {
+	String Login[]= {"22uai072","22uai90","22uai78"};
+	String element="22uai072";
+	boolean isArray=false;
+	for(String i:Login)
+	{
+		if(i.equals(element))
+		{isArray=true;
+		break;}
+	}
+		if(isArray==true)
+		{
+			System.out.println("Element is present in array!");
+		}
+		else
+			{System.out.println("Element is not  present in array!");	}
+	
+	}
+
+}
