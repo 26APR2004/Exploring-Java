@@ -1,0 +1,29 @@
+// Working of ArrayList
+package com.company;
+import java.io.*;
+import java.util.*;
+public class WorkingOfArrayLiat {
+
+	public static void main(String[]args)
+	{
+		//Declaring ArrayList
+		ArrayList<Integer>al=new ArrayList<Integer>();
+		
+		//Appending new elements in the list
+		for(int i=0;i<5;i++)
+		{ al.add(i);}
+		
+		// Printing elements
+		System.out.println(al);
+		
+		// Removing element from index 3
+		al.remove(3);
+		
+		// Displaying list after deleting
+		System.out.println(al);
+		
+		//Printing elements on by one 
+		for(int i=0;i<al.size();i++)
+			System.out.print(al.get(i)+" ");
+	}
+}
