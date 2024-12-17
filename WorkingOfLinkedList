@@ -1,0 +1,30 @@
+// Working of LinkedList
+package com.company;
+import java.io.*;
+import java.util.*;
+public class WorkingOfLinkedList {
+
+	public static void main(String[]args)
+	{
+		//Declaring LinkedList
+		LinkedList<Integer>ll=new LinkedList<Integer>();
+		
+		//Appending new elements in the list
+		for(int i=0;i<5;i++)
+		{ ll.add(i);}
+		
+		// Printing elements
+		System.out.println(ll);
+		
+		// Removing element from index 3
+		ll.remove(3);
+		
+		// Displaying list after deleting
+		System.out.println(ll);
+		
+		//Printing elements on by one 
+		for(int i=0;i<ll.size();i++)
+			System.out.print(ll.get(i)+" ");
+	}
+}
+
