@@ -1,0 +1,20 @@
+// Java program to display the Multiplication table of any number;
+package com.company;
+import java.util.Scanner;
+public class MultiplicationTableOfNnumber {
+
+	static void multiplication(int n)
+	{
+		for(int i=1;i<=10;i++)
+		System.out.println(n+"*"+i+"->"+n*i);
+	}
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the Number:");
+		int number=sc.nextInt();
+		multiplication(number);
+		
+		
+	}
+}
