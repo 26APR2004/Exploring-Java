@@ -1,0 +1,24 @@
+// Variable Arguments(Varags) in java; 
+package com.company;
+
+public class VaragsInJava {
+	static int Sum(int a,int...arr)  // Just one method
+	{
+		int sum=a;
+		for(int element:arr)
+		{
+			sum+=element;
+		}
+		return sum;
+		
+	}
+	public static void main(String[]args)
+	{
+		System.out.println(Sum(1));  // it show error becouse we required atleast on input 
+		System.out.println(Sum(1,2));
+		System.out.println(Sum(1,2,3));
+		System.out.println(Sum(1,2,3,4,5,7,9));
+		
+	}
+
+}
