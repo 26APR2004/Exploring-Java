@@ -1,0 +1,20 @@
+// Write recursion function to calculate sum of first n natural numbers;
+package com.company;
+import java.util.Scanner;
+public class SumOfNaturalNumbers {
+        static int SumOfNaturalNumber(int n)
+        {
+            if(n==1)
+            	{return 1;}
+     
+        	return n+SumOfNaturalNumber(n-1);
+        }
+        public static void main(String[]args)
+        {
+        	Scanner sc=new Scanner(System.in);
+        	System.out.println("Enter the number up to:");
+        	int number=sc.nextInt();
+        	int sum=SumOfNaturalNumber(number);
+        	System.out.printf("Sum of first %d numbers is:%d",number,sum);
+        }
+}
