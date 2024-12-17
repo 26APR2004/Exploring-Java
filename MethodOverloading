@@ -1,0 +1,30 @@
+// Method overloading in java
+package com.company;
+
+public class MethodOverloading {
+	static void sum()
+	{
+		System.out.println("Addition of numbers:");	
+		}
+	static int sum(int a)
+	{
+		return a+9;
+	}
+	static int sum(int a,int b)
+	{
+		return a+b;
+	}
+	static int sum(int a,int b,int c)
+	{
+		return a+b+c;
+	}
+	
+public static void main(String[]args)
+{
+	int a=2,b=3,c=6;
+	sum();
+	System.out.println(sum(a));
+	System.out.println(sum(a,b));
+	System.out.println(sum(a,b,c));
+}
+}
