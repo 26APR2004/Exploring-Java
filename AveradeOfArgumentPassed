@@ -1,0 +1,21 @@
+
+//Write function to find average of a set of numbers passed as arguments;
+package com.company;
+
+public class AveradeOfArgumentPassed {
+	static int var(int...arr)
+	{
+		int sum=0;
+		int avg=0;
+		for(int i:arr)
+		{
+			sum+=i;
+		}
+		return avg=sum/arr.length;
+	}
+ public static void main(String []args) 
+ {
+	System.out.println("Average:"+(float) var(2,3,8,9));
+	
+ }
+}
