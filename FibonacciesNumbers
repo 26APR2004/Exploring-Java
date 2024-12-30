@@ -1,0 +1,21 @@
+//Write function to a print N.th index  fibonacci series
+package com.company;
+import java.util.Scanner;
+public class FibonacciesNumbers {
+	static int fib(int n)
+	{
+		if(n==1 || n==2)
+         return n-1;
+		else
+			return fib(n-1)+fib(n-2);
+	}
+   public static void main(String[]args)
+   {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("Enter the Index Number:");
+	   int index=sc.nextInt();
+	   
+	   System.out.printf("Fibonacci number at %d index is:%d",index,fib(index));
+	   
+   }
+}
