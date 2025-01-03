@@ -1,0 +1,25 @@
+/* Program Name:Recursion */
+// Author's name:Sujal
+/* Recursive code for printing  n to 1 numbers */
+package com.company;
+import java.util.Scanner;
+public class RecursionToDisplayNTo1 {
+	static void print(int n,int i)
+	{
+		if(i>=1)
+		System.out.print(i+" ");
+		else
+			return;
+		print(n,--i);
+	}
+	public static void main(String[]args)
+	{
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the number:");
+		int n=sc.nextInt();
+		print(n,n);
+	}
+
+}
+
