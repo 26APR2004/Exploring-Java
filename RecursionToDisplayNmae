@@ -1,0 +1,18 @@
+/* Program Name:Recursion */
+// Author's name:Sujal
+/* Recursive code for printing  name n times */
+package com.company;
+
+public class RecursionToDisplayNmae {
+	static void print(int n,int i)
+	{
+		if(i>n) return;
+			System.out.println("Sujal");
+		print(n,i+1);
+	}
+public static void main(String[]args)
+{
+	int n=4;
+	print(n,1);
+}
+}
