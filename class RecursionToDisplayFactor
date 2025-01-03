@@ -1,0 +1,24 @@
+/* Program Name:Recursion */
+// Author's name:Sujal
+/* Recursive code for printing  factor of  N numbers */
+package com.company;
+import java.util.Scanner;
+public class RecursionToDisplayFactor {
+	static int factor(int n)
+	{
+		if( n==1)
+			return 1;
+		if (n==0)
+		return 0;
+		return n*factor(n-1);
+		
+	}
+public static void main(String[]args)
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter the number:");
+	int n=sc.nextInt();
+	int fact=factor(n);
+	System.out.printf("Factors of %d numbers is:%d",n,fact);
+}
+}
