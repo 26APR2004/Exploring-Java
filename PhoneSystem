@@ -1,0 +1,26 @@
+/* Program Name: Practice set */
+// Author's Name: Sujal
+/*
+ * Create a class CellPhone with methods to print "Ringing..",Vibrating.." etc.
+ */
+package com.company;
+class CellPhone  //Sub class
+{
+	public void unsilent()   // method_1
+	{
+		System.err.println("Ringing.....!");
+	}
+	public void silent() // method_2
+	{
+		System.out.println("Vibrating.....!");
+	}
+}
+//Main class
+public class PhoneSystem {
+     public static void main(String[]args)
+     {
+    	 CellPhone c1=new CellPhone();  //Object of CellPhone class
+    	 c1.unsilent();  //Calling
+    	 c1.silent();
+     }
+}
