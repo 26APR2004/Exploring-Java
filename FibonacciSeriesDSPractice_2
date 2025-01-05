@@ -1,0 +1,27 @@
+/* Program Name: Data Structure Multiple Recursion*/
+// Author's Name: Sujal
+/*
+ * Given an integer N. Print the Fibonacci series up to the Nth term.
+ * Time Complexity=O(2^n);  // Because od two rec call.
+ * Space Complexity=O(n);
+ */
+package com.company;
+import java.util.Scanner;
+public class FibonacciSeriesDSPractice_2 {
+	static int fib(int n)
+	{
+		if(n<=1)
+			return n;
+		int last=fib(n-1);
+		int slast=fib(n-2);
+		return last+slast;
+	}
+public static void main(String[]args)
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the Nth term:");
+	int n=sc.nextInt();
+	for(int i=0;i<=n;i++)
+	System.err.print(fib(i)+" ");
+}
+}
