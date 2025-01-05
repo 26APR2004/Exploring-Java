@@ -1,0 +1,38 @@
+/* Program Name: Data Structure (Swap)*/
+// Author's Name: Sujal
+/*
+ *  Check the Give string is palindrome or not
+ * Space Complexity=O(1);
+ * Time Complexity=O(N);
+ */
+package com.company;
+import java.util.Scanner;
+import java.io.*;
+
+public class Palindrome {
+	static private boolean palindrome(String s)
+	{
+		int left=0,right=s.length()-1;
+		if(left>=s.length()/2) return false;
+		
+		char  f=s.charAt(left);
+		char l=s.charAt(right-left-1);
+		while(left<s.length()/2) {
+		if(s.charAt(left)==s.charAt(right-left-1))
+		left++;
+		}
+		return true;
+		
+	}
+ public static void main(String[]args)
+ {
+	 Scanner sc=new Scanner(System.in);
+	 System.out.print("Enter the String:");
+	 String s=sc.next();
+	 boolean r=palindrome(s);
+	 if(r==true)
+		 System.out.println("Palindrome");
+	 else
+		 System.out.println(" Not Palindrome");
+ }
+}
