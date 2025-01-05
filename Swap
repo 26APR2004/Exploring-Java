@@ -1,0 +1,41 @@
+/* Program Name: Data Structure (Swap)*/
+// Author's Name: Sujal
+/*
+ *  Reverse the elements of array By using Swap
+ * Space Complexity=O(1);
+ * Time Complexity=O(N);
+ */
+package com.company;
+import java.util.Scanner;
+public class Swap {
+	static void swap(int i,int n,int arr[])
+	{
+		if(i>=n/2) return;
+		int tem=0;
+		while(i<n/2)
+		{tem=arr[i];
+		arr[i]=arr[n-i-1];
+		arr[n-i-1]=tem;
+		i++;}
+		
+		
+	}
+public static void main(String[]args)
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter the Size of array:");
+	int n=sc.nextInt();
+	int arr[]=new int[n];
+	System.out.print("Enter the array elements:");
+	 for(int i=0;i<n;i++)
+	 {
+		 arr[i]=sc.nextInt();
+	 }
+	 swap(0,n,arr);
+	 for(int i=0;i<n;i++)
+	 {
+		 System.out.print(arr[i]+" ");
+	 }
+}
+}
+
