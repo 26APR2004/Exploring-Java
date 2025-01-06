@@ -1,0 +1,90 @@
+/* Program Name: Practice set Problem*/
+// Author's Name: Sujal
+/*
+ * Create a class Square,circle,Area with a method to initialize it side ,calculate area and perimeter etc.
+ * Space Complexity=O(1);
+ * Time Complexity=O(1);
+ */
+package com.company;
+import java.lang.Math;
+
+class Square
+{
+	int side;
+	public int areaCalculation()
+	{
+		return side*side;
+	}
+	public int perimeterCalculation()
+	{
+		return 4*side;
+	}
+	public int volumeCalculation()
+	{
+		return (int) Math.pow(side, 3);
+	}
+}
+
+class Rectangle
+{
+	int length,width,height;
+	
+	public int areaCalculation()
+	{
+		return length*width;
+	}
+	public int volumeCalculation()
+	{
+		return length*width*height;
+	}
+	public int perimeterCalculation()
+	{
+		return 2*(length+width);
+	}
+}
+
+class Circle
+{
+	int radius;
+	static float pi=(float) 3.14;
+	int height;
+	public int areaCalculation( )
+	{
+		return (int) (pi*radius*radius);
+	}
+	public int volumeCalculation(int height )
+	{
+		return (int)(pi*Math.pow(radius, 2)*height);
+	}
+	public int perimeterCalculation()
+	{
+		return (int)(2*pi*radius);
+	}
+	
+}
+public class Area {
+ public static void main(String[]args)
+ {
+	 Square s1=new Square();
+	 int side=s1.side=4;
+	 System.out.println("Area of Square:"+s1.areaCalculation());
+	 System.out.println("Perimeter of Square:"+s1.perimeterCalculation());
+	 System.out.println("Volume of Square:"+s1.volumeCalculation());
+	 System.out.println("--------------------------------------------------------------------------");
+	 Rectangle r1=new Rectangle();
+	 int length=r1.length=10;
+	 int width=r1.width=10;
+	 int height=r1.height=10;
+	 System.out.println("Area of Rectangle:"+r1.areaCalculation());
+	 System.out.println("Perimeter of Rectangle:"+r1.perimeterCalculation());
+	 System.out.println("Volumeof Rectangle:"+r1.volumeCalculation());
+	 System.out.println("--------------------------------------------------------------------------");
+	 Circle c1=new Circle();
+	 int radius=c1.radius=10;
+	 int height1=c1.height=10;
+	 System.out.println("Area of Circle:"+c1.areaCalculation());
+	 System.out.println("Volume of Circle:"+c1.volumeCalculation(height1));
+	 System.out.println("Perimeter of Circle:"+c1.areaCalculation());
+	 
+ }
+}
