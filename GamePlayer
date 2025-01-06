@@ -1,0 +1,33 @@
+/* Program Name: Practice set Problem*/
+// Author's Name: Sujal
+/*
+ * Create a class  Dragon Hunter player who is capable of Running,Firing,Hitting;
+ * Space Complexity=O(1);
+ * Time Complexity=O(1);
+ */
+package com.company;
+
+class Dragon_Hunter
+{
+	public void Hitting()
+	{
+		System.err.println("Hitting on Enemey!");
+	}
+	public void Firing()
+	{
+		System.err.println("Firing gun on Enemey!");
+	}
+	public void Running()
+	{
+		System.err.println("Running from police!");
+	}
+}
+public class GamePlayer {
+public static void main(String[]args)
+{
+	Dragon_Hunter player=new Dragon_Hunter();
+	player.Hitting();
+	player.Firing();
+	player.Running();
+}
+}
