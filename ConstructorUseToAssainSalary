@@ -1,0 +1,32 @@
+/* Program Name: Constructor*/
+// Author's Name: Sujal
+/*
+ * Overload the Employee Constructor to intialize the salary to Rs.10,000;
+ * Space Complexity=O(1);
+ * Time Complexity=O(1);
+ */
+package com.company;
+class Employee_1
+{
+	private long salary;
+	public Employee_1()  //Default Constructor
+	{
+		salary=10000;
+	}
+	public Employee_1(long s)  // Single parameter overload constructor
+	{
+		salary=s;
+	}
+	public long getSlary()
+	{
+		return salary;
+	}
+	
+}
+public class ConstructorUseToAssainSalary {
+  public static void main(String[]args)
+  {
+	  Employee_1 e1=new Employee_1(1200000);
+	   System.out.println("Salary of Emplyee:$"+e1.getSlary());
+  }
+}
