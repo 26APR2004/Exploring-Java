@@ -1,0 +1,45 @@
+/* Program Name: DS:Hashing 3*/
+// Author's Name: Sujal
+/*
+ * to calculate the how many times element of the array is appear by using Hashing
+ * Space Complexity=O(1);
+ * Time Complexity=O(n);
+ */
+package com.company;
+import java.util.Scanner;
+import java.lang.Math;
+public interface HashingToCalaculateFrequency {
+ public static void main(String[]args)
+ {
+	 System.out.print("Enter the size of array:");
+	 Scanner sc=new Scanner(System.in);
+	 int n=sc.nextInt();
+	 int arr[]=new int[n];
+	 System.out.print("Enter the elements of array:");
+	 for(int i=0;i<n;i++)
+	 {
+		 arr[i]=sc.nextInt();
+	 }
+	 // take queri from user
+	 System.out.print("Enter the max number from queri:");
+	 int max=sc.nextInt();
+	 
+	 // Pre-Storing
+	   int hash[]=new int[(int) Math.pow(10,6)];
+	   for(int i=0;i<n;i++)
+		   hash[arr[i]]+=1;
+	 
+	 // take queri from user
+
+	 
+	 while(max--!=0)
+	 {
+		 // enter the number which you want see how many times is it appear
+		 int number;
+		 number=sc.nextInt();
+		 // Fetching
+		 System.out.println(hash[number]);
+	 }
+	 
+ }
+}
