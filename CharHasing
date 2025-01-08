@@ -1,0 +1,33 @@
+/* Program Name: DS:Hashing 3*/
+// Author's Name: Sujal
+/*
+ * to calculate the how many times Characters of the String is appear by using Hashing
+ * Space Complexity=O(1);
+ * Time Complexity=O(n);
+ */
+package com.company;
+import java.util.Scanner;
+public class CharHasing {
+public static void main(String[]args)
+{
+	System.out.print("Enter the String:");
+	Scanner sc=new Scanner(System.in);
+	String s=sc.nextLine();
+	
+	//Pre-Processing
+	int hash[]=new int[256];
+    for(int i=0;i<s.length();i++)
+    {
+    	hash[s.charAt(i)]++;   // ASCII value of ( Ith term -a) (eg- d-a=100-97=3...)
+    }
+    System.out.print("Enter the q:");
+	   int q=sc.nextInt();
+    while(q--!=0)
+    {
+    	System.out.print("Enter the character:");
+       char c=sc.next().charAt(0);
+       // Fetching
+       System.out.println(hash[c]);
+    }
+}
+}
