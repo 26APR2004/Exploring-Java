@@ -1,0 +1,55 @@
+/* Program Name: DS:Hashing 3*/
+// Author's Name: Sujal
+/*
+ * to calculate the how many times element is appear by using Hashing
+ * Space Complexity=O(1);
+ * Time Complexity=O(n);
+ */
+package com.company;
+import java.util.HashMap;
+import java.util.Scanner;
+public class NumberHashing {
+ public static void main(String[]args)
+ {
+	
+	 System.out.print("Enter the size of array:");
+	 Scanner sc=new Scanner(System.in);
+	 int n=sc.nextInt();
+	 int arr[]=new int[n];
+	 System.out.print("Enter the elements of array:");
+	 for(int i=0;i<n;i++)
+	 {
+		 arr[i]=sc.nextInt();
+	 }
+	 
+     //Pre-computing
+	 HashMap<Integer,Integer> M=new HashMap<>();  // Create Hashmap
+	 for(int i=0;i<n;i++)
+	 {
+		 int key=arr[i];
+		 int freq=0;
+		 if(M.containsKey(arr[i]))
+			 freq=M.get(key);
+		 freq++;
+		 M.put(key,freq);
+				 
+			 
+	 }
+	 
+	 int q;
+	 System.out.print("Enter the q :");
+	   q=sc.nextInt();
+	while(q--!=0)
+	{
+		System.out.print("Enter the number:");
+		int number=sc.nextInt();
+		
+		if(M.containsKey(number))
+			System.out.println(M.get(number));
+		else
+			System.out.println("0");
+		
+	}
+	 
+ }
+}
