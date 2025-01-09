@@ -1,0 +1,40 @@
+/* Program Name: Practice Of Constructor & AcessModifier*/
+//Author Name:Sujal Mane
+/*
+ * Topic: Create a class Sphere and use getter and setter to set it's radius and height and to calculate volume and total surface area of Cylinder. 
+ * T.C=O(1);
+ * S.C=O(1);
+ */
+package com.company;
+class Sphere
+{
+	private int radius;
+	
+	public Sphere()
+	{
+		radius=0;
+	}
+	public Sphere(int r)
+	{
+		this.radius=r;
+	}
+	public double volume()
+	{
+		return (4/3)*Math.PI*Math.pow(radius,3);
+	}
+	
+	public double SurfaceArea()
+	{
+		return 4*Math.PI*Math.pow(radius,2);
+	}
+	
+}
+public class PracticeConstructor {
+ public static void main(String[]args)
+ {
+	 Sphere s1=new Sphere(12);
+	 System.out.println("Volume of sphere:"+s1.volume());
+	 System.out.println("Surface area of sphere:"+s1.SurfaceArea());
+	 
+ }
+}
