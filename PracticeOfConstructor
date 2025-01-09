@@ -1,0 +1,40 @@
+/* Program Name: Practice Of Constructor & AcessModifier*/
+//Author Name:Sujal Mane
+/*
+ * Topic: Overload a constructor used to initiate a rectangle of length 4 and breadth 5 for using custom parameter.
+ * T.C=O(1);
+ * S.C=O(1);
+ */
+package com.company;
+class RectangleShape
+{
+	private int length;
+	private int breadth;
+	
+	public RectangleShape()
+	{
+		length=4;
+		breadth=5;
+	}
+	public RectangleShape(int l,int b)
+	{
+		this.length=l;
+		this.breadth=b;
+	}
+	public int getlength()
+	{
+		return length;
+	}
+	public int getbreadth()
+	{
+		return breadth;
+	}
+}
+public class PracticeOfConstructor {
+   public static void main(String[]args)
+   {
+	   RectangleShape r1=new RectangleShape(12,23);
+	   System.out.println("length:"+r1.getlength());
+	   System.out.println("breadth:"+r1.getbreadth());
+   }
+}
