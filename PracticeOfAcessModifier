@@ -1,0 +1,57 @@
+/* Program Name: Practice Of Constructor & AcessModifier*/
+//Author Name:Sujal Mane
+/*
+ * Topic: Create a class cylinder and use getter and setter to set it's radius and height and to calculate volume and total surface area of Cylinder. 
+ * T.C=O(1);
+ * S.C=O(1);
+ */
+package com.company;
+class Cylinder
+{
+	
+	private int radius;
+	private int height;
+	
+	// setter
+	public void setRadius(int r)
+	{
+		radius=r;
+	}
+	//getter
+	public int getRadius()
+	{
+	    return radius;
+	}
+	// setter
+		public void setHeight(int h)
+		{
+			height=h;
+		}
+	//getter
+		public int getHeight()
+		{
+		    return height;
+		}
+		
+		public int Volume()
+		{
+			return (int)(Math.PI*Math.pow(radius,2)*height);
+		}
+		public int totalSurfaceArea()
+		{
+			return (int)(2*Math.PI*radius*height+2*Math.PI*Math.pow(radius,2));
+		}
+		
+}
+public class PracticeOfAcessModifier {
+  public static void main(String[]args)
+  {
+	  Cylinder c1=new Cylinder();
+	  c1.setRadius(12);
+	  System.out.println("Radius of Cylinder:"+ c1.getRadius());
+	  c1.setHeight(10);
+	  System.out.println( "Height of Cylinder:"+c1.getHeight());
+	  System.out.println( "Volume of Cylinder:"+c1.Volume());
+	  System.out.println( "Total surface area of Cylinder:"+c1.totalSurfaceArea());
+  }
+}
