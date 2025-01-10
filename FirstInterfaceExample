@@ -1,0 +1,36 @@
+/* Program Name: Interface*/
+
+//Author Name:Sujal Mane
+/*
+ * Topic: Create two class's parent and child class and extend it;
+ * T.C=O(1);
+ * S.C=O(1);
+ */
+package com.company;
+class Food
+{
+	int Calories;
+	String Salt;
+	String Sugar;
+	
+	
+}
+class Pizza extends Food
+{
+    String Pizza_Type;	
+}
+public class FirstInterfaceExample {
+ public static void main(String[]args)
+ {
+	 Pizza p1=new  Pizza();
+	 p1.Calories=400;
+	 p1.Salt="High";
+	 p1.Sugar="Moderate";
+	 p1.Pizza_Type="Chiken-Pizza";
+	 
+	 System.out.println(p1.Salt);
+	 System.out.println(p1.Pizza_Type);
+	 
+			 
+ }
+}
