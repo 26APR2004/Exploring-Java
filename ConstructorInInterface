@@ -1,0 +1,32 @@
+/* Program Name: Constructor in Interface*/
+
+//Author Name:Sujal Mane
+/*
+ * Topic: Constructor work in Interface;
+ * T.C=O(1);
+ * S.C=O(1);
+ */
+package com.company;
+
+class Base
+{
+	Base()  //Default Constructor
+	{
+		System.out.println("I am a Constructor");
+	}
+}
+
+class Derived extends Base
+{
+	int x,y;
+	Derived()
+	{
+		System.out.println("I am a Constructor od Derived class");
+	}
+}
+public class ConstructorInInterface {
+public static void main(String[]args)
+{
+	Derived d=new Derived();
+}
+}
