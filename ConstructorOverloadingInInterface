@@ -1,0 +1,43 @@
+/* Program Name: Constructor Overloading in Interface*/
+
+//Author Name:Sujal Mane
+/*
+ * Topic: Constructor work in Interface;
+ * T.C=O(1);
+ * S.C=O(1);
+ */
+package com.company;
+
+class Base1
+{
+	Base1()  //Default Constructor
+	{
+		System.out.println("I am a Constructor");
+	}
+	Base1(int x)  //Parameterized Constructor
+	{
+		System.out.println("I am a Constructor with value x "+x);
+	}
+	
+}
+
+class Derived1 extends Base1
+{
+	
+	Derived1()
+	{
+		super(12);
+		System.out.println("I am a Constructor of Derived class");
+	}
+	Derived1(int x,int y)
+	{
+		super(x);
+		System.out.println("Sum of x and y:"+(x+y));
+	}
+}
+public class ConstructorOverloadingInInterface {
+  public static void main(String[]args)
+  {
+	  Derived1 d=new Derived1(15,13);
+  }
+}
