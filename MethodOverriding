@@ -1,0 +1,31 @@
+/* Program Name: Method Overriding*/
+
+//Author Name:Sujal Mane
+/*
+ * Topic: Constructor work in Interface;
+ * T.C=O(1);
+ * S.C=O(1);
+ */
+package com.company;
+class A
+{
+	public void method()
+	{
+		System.out.println("This is A method");
+	}
+}
+class B extends A
+{
+	@Override
+	public void method()
+	{
+		System.out.println("This is B method");
+	}
+}
+public class MethodOverriding {
+ public static void main(String[]args)
+ {
+	 B b1=new B();
+	 b1.method();
+ }
+}
