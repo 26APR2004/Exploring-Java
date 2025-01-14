@@ -1,0 +1,42 @@
+/* Program Name:Method Dispatch*/
+//Author Name:Sujal Mane
+/*
+ * Topic: Understanding dispatch method in java
+ * T.C=O(1);
+ * S.C=O(1);
+ */
+package com.company;
+
+class phone
+{
+	void phonename()
+	{
+		System.out.println("Nokia");}
+	void on()
+	{
+		System.out.println("Welcome to Nokia..!");
+	}
+}
+class smartPhone extends phone
+{
+	void smartphonename()
+	{
+		System.out.println("Samsung..$");
+	}
+	void on()
+	{
+		System.out.println("Welcome to Samsung..!");
+	}
+}
+
+public class MathodDispatch {
+   public static void main(String[]args)
+   {
+	   
+	   phone p1=new smartPhone();
+	   p1.on();
+	   p1.phonename();
+	   //p1.smartphonename();// it will show error because it is not in parent class
+	   
+   }
+}
