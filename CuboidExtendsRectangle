@@ -1,0 +1,56 @@
+/* Program Name: Practice set*/
+
+//Author Name:Sujal Mane
+/*
+ * Topic: Create class rectangle and use interface to create another class cuboid from it
+ * T.C=O(1);
+ * S.C=O(1);
+ */
+package com.company;
+import java.util.Scanner;
+class Rectangle1
+{
+	int length;
+	int width;
+	
+	Rectangle1(int l,int w)  //Constructor to assign value
+	{
+		this.length=l;
+		this.width=w;
+	}
+	
+	public double Rectanglearea()
+	{
+		return length*width;
+	}
+}
+
+class Cuboid extends Rectangle1
+{
+	int height;
+	
+	Cuboid(int l,int w,int h)
+	{
+		super(l,w);
+		this.height=h;
+	}
+	public double Cuboidarea()
+	{
+		return 2*(length*width+width*height+length*height);
+	}
+}
+public class CuboidExtendsRectangle {
+public static void main(String[]args)
+{
+	Scanner sc=new Scanner(System.in);
+
+	System.out.print("Enter the Width:");
+	int w=sc.nextInt();
+	System.out.print("Enter the length:");
+	int l=sc.nextInt();
+	System.out.print("Enter the height:");
+	int h=sc.nextInt();
+	Cuboid c1=new Cuboid(l,w,h);
+	System.out.println("Area of Rectangle "+c1.Rectanglearea());
+}
+}
