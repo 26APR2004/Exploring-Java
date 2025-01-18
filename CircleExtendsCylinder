@@ -1,0 +1,49 @@
+/* Program Name: Practice set*/
+
+//Author Name:Sujal Mane
+/*
+ * Topic: Create class circle and use interface to create another class cylinder from it
+ * T.C=O(1);
+ * S.C=O(1);
+ */
+package com.company;
+import java.util.Scanner;
+class Circle1
+{
+	Circle1(int r)
+	{
+		this.r=r;
+	}
+	public int r;
+	public double area()
+	{
+		return Math.PI*this.r*this.r;
+	}
+}
+class Cylinder1 extends Circle1
+{
+	Cylinder1(int r,int h)  // Parmeterized Constructor
+	{
+		super(r);  // Super key to fetch the r value from the parent class
+		this.h=h;
+	}
+	public int h;
+	public double volume()
+	{
+		return Math.PI*this.r*this.r*this.h;
+	}
+}
+public class CircleExtendsCylinder {
+  public static void main(String[]args)
+  {
+	  Scanner sc=new Scanner(System.in);
+	  System.out.print("Enter the height:");
+	  int h=sc.nextInt();
+	  System.out.print("Enter the radius:");
+	  int r=sc.nextInt();
+	  
+	  Cylinder1 c1=new Cylinder1(h,r);
+	  System.out.println("Area of circle:"+c1.area());
+	  System.out.println("Volume of circle:"+c1.volume());
+  }
+}
