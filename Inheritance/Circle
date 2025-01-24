@@ -1,0 +1,27 @@
+// class Circle extends shape_1
+// Program_2-(Circle,*,*)
+package com.Silver_Oak;
+
+public class Circle extends Shape_1 {
+     double r;
+      Circle(double r)
+     {
+    	 this.r=r;
+     }
+     
+	
+
+	@Override
+	double area() {
+	
+		return Math.PI*Math.pow(r, 2);
+	}
+
+	@Override
+	double peri() {
+		
+		return 2*Math.PI*r;
+	}
+      
+	
+}
