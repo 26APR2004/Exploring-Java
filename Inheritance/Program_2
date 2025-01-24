@@ -1,0 +1,27 @@
+// This program is display the area and perimeter of the Rectangle,circle...
+// Program_2-(Circle,Rectangle,Rhombus)
+package com.Silver_Oak;
+
+abstract class Shape_1  //parent abstract class
+{
+	abstract double area();
+	abstract double peri();
+}
+
+// Main class
+public class Program_2 {
+    public static void main(String[]args)
+    {
+    	Circle c1=new Circle(12.3);  // object creation
+    	System.out.println("area of circle:"+c1.area());
+    	System.out.println("Perimeter of circle:"+c1.peri());
+    	
+    	Shape_1 R1=new Rectangle(10,2); //Dispatch / Up Cating
+    	System.out.println("area of Rectangle:"+R1.area());
+    	System.out.println("Perimeter of Rectangle:"+R1.peri());
+    	
+    	Shape_1 rh=new Rhombus(5,2);
+    	System.out.println("area of Rhombus:"+rh.area());
+    	System.out.println("Perimeter of Rhombus:"+rh.peri());
+    }
+}
