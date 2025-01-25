@@ -1,0 +1,15 @@
+//Hierarchical Inheritance
+// Program_4--Animal->(Dog,Cat);
+
+package com.Silver_Oak;
+
+public class Program_4 {
+  public static void main(String[]args)
+  {
+	  Dog d1=new Dog("Tiger");
+	  d1.bark();
+	  Cat c1=new Cat("Tiger");
+	  c1.meow();
+	   
+}
+}
