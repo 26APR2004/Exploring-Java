@@ -1,0 +1,23 @@
+// Multilevel Inheritance
+// Program_3--Person->Student->E*
+package com.Silver_Oak;
+
+public class Student extends Person {
+	int PRN;
+    String Course;
+     public Student(String name, int age,int PRN,String Course) {
+		super(name, age);
+		this.PRN=PRN;
+		this.Course=Course;	
+	}
+     @Override
+     public void display()
+     {
+    	 super.display();
+    	 System.out.println("PRN:"+PRN+"\n"+"Course:"+Course);
+     }
+     
+	
+     
+     
+}
