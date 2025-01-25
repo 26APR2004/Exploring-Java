@@ -1,0 +1,16 @@
+//Hierarchical Inheritance
+// Program_4--Animal->(Dog,C*);
+package com.Silver_Oak;
+
+public class Dog extends Animal{
+	Dog(String name)
+	{
+		super(name);
+	}
+    public void bark()
+    { 
+    	super.sleep();
+    	super.eat();
+    	System.out.println("My Dog "+name+"is barking.");
+    }
+}
