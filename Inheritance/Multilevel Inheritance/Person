@@ -1,0 +1,21 @@
+// Multilevel Inheritance
+// Program_3--Person->S*->E*
+package com.Silver_Oak;
+
+public class Person {
+     String name;
+     int age;
+     
+     public Person(String name,int age)
+     {
+    	this.name=name;
+    	this.age=age;
+     }
+     
+     public void display()
+     {
+    	  System.out.println("name:"+name+"\n"+"age:"+age);
+    	  
+     }
+     
+}
