@@ -1,0 +1,26 @@
+//Hierarchical Inheritance
+// Program_4--Animal->(D*,C*);
+package com.Silver_Oak;
+
+public class Animal {
+    public String name;
+    
+    Animal()
+    {
+    	this.name="Null";
+    }
+    Animal(String name)
+    {
+    	this.name=name;
+    }
+   
+    public void eat()
+    {
+    	System.out.println(name+" is Eating Food!");
+    }
+    public void sleep()
+    {
+    	System.out.println(name+" Sleepy!");
+    }
+	
+}
