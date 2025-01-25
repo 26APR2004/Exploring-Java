@@ -1,0 +1,24 @@
+// Multilevel Inheritance
+// Program_3--Person->Student->Employee
+package com.Silver_Oak;
+
+public class Employee extends Student {
+      int Eid;
+      String Com_name;
+	public Employee(String name, int age, int PRN, String Course,int Eid,String Com_name) {
+		super(name, age, PRN, Course);
+		this.Eid=Eid;
+		this.Com_name=Com_name;
+	}
+	
+	@Override
+	public void display()
+	{
+		super.display();
+   	 System.out.println("Employee id:"+Eid+"\n"+"Company name:"+Com_name);
+
+	}
+
+	
+
+}
