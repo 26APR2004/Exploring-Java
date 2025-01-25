@@ -1,0 +1,19 @@
+//Interface in java
+//Program_5--PaymentGetway-+>(CreditCardPayment,PayPalPayment,UPIPayment)
+package com.Silver_Oak;
+
+interface PaymentGetway
+{
+	void payment(double amount);  //Method to processing amount
+}
+public class Program_5 {
+  public static void main(String[]args)
+  {
+	  PaymentGetway p1=new CreditCardPayment(); // Dispatch / Up-casting
+	  p1.payment(1200);
+	  PaymentGetway p2=new PayPalPayment();
+	  p2.payment(200);
+	  PaymentGetway p3=new UPIPayment();
+	  p3.payment(23300);
+  }
+}
