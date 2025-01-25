@@ -1,0 +1,34 @@
+// Multilevel Inheritance
+// Program_3--Person->Student->Employee
+package com.Silver_Oak;
+import java.util.Scanner;
+public class Program_3 {
+	
+	public static void main(String[]args)
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter the name:");
+	String name=sc.nextLine();
+	System.out.print("Enter the age:");
+	int age=sc.nextInt();
+	System.out.print("Enter the PRN:");
+	int PRN=sc.nextInt();
+	System.out.print("Enter the course:");
+	String Course=sc.next();
+	System.out.print("Enter the Employee id:");
+	int Eid=sc.nextInt();
+	System.out.print("Enter the Employee Company name:");
+	String Com_name=sc.next();
+	
+    /*Person e1=new Employee(name,age, PRN, Course,Eid,Com_name);
+    e1.display();*/
+    
+    /*Person s1=new Student(name,age, PRN, Course);
+    s1.display();*/
+	
+	Person p1=new Person(name,age);
+    p1.display();
+    
+    
+}}
+
