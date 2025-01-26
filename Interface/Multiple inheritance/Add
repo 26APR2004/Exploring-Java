@@ -1,0 +1,9 @@
+// This Program_6 is overall related to Multiple inheritance by using Interface.
+//Program_6-->(Add,S*)-+>C*;
+
+package com.Silver_Oak;
+
+public interface Add {
+    int add(int a,int b); // it's public and abstract method by default
+}
+
