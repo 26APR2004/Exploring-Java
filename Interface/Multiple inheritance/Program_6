@@ -1,0 +1,17 @@
+// This Program_6 is overall related to Multiple inheritance by using Interface.
+//Program_6-->(Add,Sub)-+>Cal;
+package com.Silver_Oak;
+import java.util.Scanner;
+public class Program_6 {
+   public static void main(String[]args)
+   {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.print("Enter the two numbers:");
+	   int a=sc.nextInt();
+	   int b=sc.nextInt();
+	   Add a1=new Cal(a,b);
+	   System.out.printf("Addition of %d and %d is : %d\n",a,b,a1.add(a, b));
+	   Sub s1=new Cal(a,b);
+	   System.out.printf("Subtraction of %d and %d is : %d",a,b,s1.sub(a, b));
+   }
+}
