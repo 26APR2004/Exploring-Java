@@ -1,0 +1,26 @@
+// This Program_6 is overall related to Multiple inheritance by using Interface.
+//Program_6-->(A*,S*)-+>Cal;
+
+package com.Silver_Oak;
+
+public class Cal implements Add,Sub {
+
+	int a,b;
+	Cal(int a,int b)
+	{
+		this.a=a;
+		this.b=b;
+	}
+	@Override
+	public int sub(int a, int b) {
+		return a-b;
+		
+	}
+
+	@Override
+	public int add(int a, int b) {
+		return a+b;
+				
+	}
+
+}
