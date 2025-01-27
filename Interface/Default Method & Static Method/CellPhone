@@ -1,0 +1,14 @@
+// Static methods and Default Methods java interface
+// Program_7-->(C*,C*)&CellPhone-+>S*
+package com.Silver_Oak;
+
+public class CellPhone {
+	public void addNumber()
+	{
+		System.out.println("Adding new contact Number!");
+	}
+	public void Message()
+	{
+		System.out.println("Reciving message !");
+	}
+}
