@@ -1,0 +1,12 @@
+// Static methods and Default Methods java interface
+// Program_7-->(C*,CallingSystem)&C*-+>S*
+package com.Silver_Oak;
+
+public interface CallingSystem {
+   void calling(int number);
+   void voiceCall();
+   default void RegulationMeassage()  // Default method (New+JDK8)
+   {
+	   System.out.println("Be Safe From Unauthorized Acess*");
+   }
+}
