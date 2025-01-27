@@ -1,0 +1,17 @@
+// Static methods and Default Methods java interface
+// Program_7-->(Camera,CallingSystem)&CellPhone-+>SmartPhone
+package com.Silver_Oak;
+
+public class Program_7 {
+    public static void main(String[]args)
+    {
+    	SmartPhone p1=new SmartPhone();
+    	p1.photos();
+    	p1.video();
+    	p1.calling(91758);
+    	p1.voiceCall();
+    	p1.addNumber();  // CellPhone Class Method
+    	p1.RegulationMeassage();
+    	Camera.Camera_4k();   //static method call
+    }
+}
