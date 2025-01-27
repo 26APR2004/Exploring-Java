@@ -1,0 +1,12 @@
+// Static methods and Default Methods java interface
+// Program_7-->(Camera,C*)&C*-+>S*
+package com.Silver_Oak;
+
+public interface Camera {
+      void photos();
+      void video();
+      static void Camera_4k()  // Static method (New+JDK8)
+      {
+   	   System.out.println("Hd 4K Photos and Videos");
+      }
+     }
