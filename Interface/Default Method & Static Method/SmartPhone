@@ -1,0 +1,28 @@
+// Static methods and Default Methods java interface
+// Program_7-->(C*,C*)&C*-+>SmartPhone
+package com.Silver_Oak;
+
+public class SmartPhone extends CellPhone implements Camera,CallingSystem {
+	
+	public void photos()
+    {
+  	  System.out.println("Clicking Photos!");
+    }
+	
+	public void video()
+    {
+  	  System.out.println("Making Videos!");
+    }
+	public void calling(int number)
+	{
+		System.out.println("Call to number:"+number);
+	}
+	public void voiceCall()
+	{
+		System.out.println("HELLO HOW IS'T GOING ON $");
+	}
+//	public  void RegulationMeassage()  // Default method Override
+//	   {
+//		   System.out.println("Be Safe From Hackers Acess* Don't Share An Private Inf");
+//	   }
+}
