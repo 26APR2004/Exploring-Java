@@ -1,0 +1,60 @@
+/*
+ * 	You have to implement a library using Java class Library
+ * Methods: addBook(),issueBook(),ShowAvailableBook(),returnBook()
+ */
+package com.Silver_Oak;
+
+class Library
+{
+	String books[];
+	int no_books;
+	 Library()
+	{
+		this.books=new String[100];
+		this.no_books=0;
+	}
+	public void addBook(String book)
+	{
+		
+			this.books[no_books]=book;
+			no_books=no_books+1;
+			
+	}
+	public void showAvilableBooks()
+	{
+		for(int i=0;i<=no_books;i++)
+		{
+			if(books[i]==null)
+				continue;
+			System.out.println("+"+" "+books[i]);
+		}
+	}
+	
+	public void issueBook(String Book)
+	{
+		for(int i=0;i<=no_books;i++)
+		{
+			if(Book==books[i])
+			books[i]=null;
+		}
+		System.out.println(Book+" book is issued");
+	}
+	public void returnBook(String Book)
+	{
+		addBook(Book);
+	}
+}
+public class Exercise_4 {
+      public static void main(String[]args)
+      {
+    	  Library l1=new Library();
+    	  l1.addBook("star Wars");
+    	  l1.addBook("Marvel");
+    	  l1.addBook("Justice Leage");
+//    	  l1.showAvilableBooks();
+    	  l1.issueBook("star Wars");
+    	  //l1.showAvilableBooks();
+    	  l1.returnBook("star Wars");
+    	  l1.showAvilableBooks();
+      }
+}
