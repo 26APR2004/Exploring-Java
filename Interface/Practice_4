@@ -1,0 +1,41 @@
+/* Create a class with ring(),lift() and disconnect() methods as abstract methods create another class smartTelephone
+and demonstrate polymorphism*/
+package com.Silver_Oak;
+
+ abstract class Telephone
+{
+	abstract void ring();
+	abstract void lift();
+	abstract void disconnect();
+}
+ 
+ class SmartTelephone extends Telephone
+ {
+
+	@Override
+	void ring() {
+		System.out.println("Ringing");
+		
+	}
+
+	@Override
+	void lift() {
+		System.out.println("lifting");
+		
+	}
+
+	@Override
+	void disconnect() {
+		System.out.println("Disconnect");
+	}
+	 
+ }
+public class Practice_4 {
+   public static void main(String[]args)
+   {
+	   Telephone t1=new SmartTelephone();
+	   t1.ring();
+	   t1.lift();
+	   t1.disconnect();
+   }
+}
