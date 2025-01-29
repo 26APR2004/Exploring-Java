@@ -1,0 +1,61 @@
+package com.Silver_Oak;
+
+interface TvRemote
+{
+	void switch_Off();
+	void volume_i();
+	void volume_d();
+}
+interface SmartTvRemote extends TvRemote
+{
+	void speech_Recog();
+	void youTube();
+	
+}
+
+class Tv implements SmartTvRemote
+{
+
+	@Override
+	public void switch_Off() {
+		System.out.println("switch_Off the Tv");
+		
+	}
+
+	@Override
+	public void volume_i() {
+		System.out.println("increasing the volume of Tv");
+		
+	}
+
+	@Override
+	public void volume_d() {
+		System.out.println("decreasing the volume of Tv");
+		
+	}
+
+	@Override
+	public void speech_Recog() {
+		System.out.println("Recognizing the spech!");
+		
+	}
+
+	@Override
+	public void youTube() {
+		System.out.println("Whatching YouTube on Tv");
+		
+	}
+	
+}
+public class Practice_5 {
+  public static void main(String[]args)
+  {
+	  SmartTvRemote u1=new Tv();
+	  u1.volume_i();
+	  u1.volume_i();
+	  TvRemote u2=new Tv();
+	  u1.volume_i();
+	 // u2.youTube();  error
+	  u2.switch_Off();
+  }
+}
