@@ -1,0 +1,35 @@
+//Create an abstract class Pen with methods write() and refill() as abstract methods
+
+package com.Silver_Oak;
+
+abstract class Pen {
+
+	abstract void write();
+	abstract void refill();
+	
+}
+
+class Study_material extends Pen
+{
+
+	@Override
+	void write() {
+		System.out.println("Pen used for Writing Notes");	
+	}
+
+	@Override
+	void refill() {
+		System.out.println("Refill is the main fuel of Pen");	
+		
+	}
+	
+}
+ public class Practice_1 
+{
+	public static void main(String[]args)
+	{
+		Study_material s1=new Study_material();
+		s1.write();
+		s1.refill();
+	}
+}
