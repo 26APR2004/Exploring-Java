@@ -1,0 +1,43 @@
+/*Create a class Monkey with jump() and bite() methods. Create a class Human which inherits this Monkey class and implements
+Basic Animal Interface with eat()and sleep() methods*/
+package com.Silver_Oak;
+
+class Monkey
+{
+	public void jump()
+	{
+		System.out.println("Jumping");
+	}
+	public void bite()
+	{
+		System.out.println("biting");
+	}
+}
+class Human extends Monkey implements BasicAnimal
+{
+	public void eat()
+	{
+		System.out.println("Eating");
+	}
+	
+	public void sleep()
+	{
+		System.out.println("sleeping");
+
+	}
+}
+
+interface BasicAnimal
+{
+	void eat();
+	void sleep();
+	
+}
+public class Practice_3 {
+    public static void main(String[]args)
+    {
+    	Human h1=new Human();
+    	h1.jump();
+    	h1.eat();
+    }
+}
