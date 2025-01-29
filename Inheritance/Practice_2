@@ -1,0 +1,35 @@
+//Use the Pen class from Practice_1 to create a concrent class FountainPen with additional method ChangNib().
+// Practice_2-	Pen-->FountainPen
+package com.Silver_Oak;
+
+ class FountainPen extends Pen
+{
+
+	@Override
+	void write() {
+		System.out.println("Fountain Pen used for Writing Notes");
+	}
+
+	@Override
+	void refill() {
+		System.out.println("Refill is the main fuel of  Fountain Pen");			
+	}
+
+	 void changeNib()
+	 {
+		 System.out.println("Change the Fountain Pen nib");		
+	 }
+	
+}
+
+public class Practice_2{
+    
+	public static void main(String[]args)
+	{
+		FountainPen p1=new FountainPen();
+		p1.changeNib();
+		p1.write();
+		p1.refill();
+	}
+	
+}
