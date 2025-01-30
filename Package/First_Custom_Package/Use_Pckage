@@ -1,0 +1,14 @@
+// use custom package in class Use_Pckage
+//  com.Silver_Oak---Custom_Package.class->add(a,b)sub(a,b),prod(a,b),div(a,b)
+package com.Silver_Oak;
+
+public class Use_Pckage {
+    public static void main(String[] args) {
+    	Custom_Package p1=new Custom_Package();  // Creating object of custom package class file
+    	int sum=p1.add(12, 12);
+    	System.out.println("Sum:"+sum);
+    	System.out.println("Subtraction:"+p1.sub(10, 2));
+    	System.out.println("Multiplication:"+p1.prod(10, 2));
+    	System.out.println("Division:"+p1.div(10, 2));
+	}
+}
