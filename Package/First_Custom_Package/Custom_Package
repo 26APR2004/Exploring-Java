@@ -1,0 +1,25 @@
+// Create a custom package in class Custom_Package-[add(),sub(),prod(),div()]
+//  com.Silver_Oak---Custom_Package.class
+package com.Silver_Oak;
+
+public class Custom_Package {
+	public int add(int a,int b)
+	   {
+		   return a+b;
+	   }
+	public int sub(int a,int b)
+	   {
+		   return a-b;
+	   }
+	public int prod(int a,int b)
+	   {
+		   return a*b;
+	   }
+	public int div(int a,int b)
+	   {
+		   return a/b;
+	   }
+      public static void main(String[] args) {
+		     
+	     }
+}
