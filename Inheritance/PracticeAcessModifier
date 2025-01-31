@@ -1,0 +1,10 @@
+// PracticeAcessModifier-->A
+package com.Silver_Oak;
+
+public class PracticeAcessModifier {
+	protected int b=13; // protected modifier
+	  int a=12; // Default modifier
+      public static void main(String[] args) {
+    	 
+	}
+}
