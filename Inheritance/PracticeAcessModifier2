@@ -1,0 +1,17 @@
+// PracticeAcessModifier-->A
+package com.Silver_Oak;
+
+class A extends PracticeAcessModifier
+{
+	void d()
+	{
+		System.out.println(a);
+	     System.out.println(b);
+	}
+}
+public class PracticeAcessModifier2  {
+       public static void main(String[] args) {
+    	   A p1=new A();
+    	   p1.d();
+	}
+}
