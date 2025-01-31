@@ -1,0 +1,32 @@
+//Create classes Calculator,HibCalculator,SciCalculator and group them into a package
+package com.Silver_Oak;
+
+class Calculator
+{
+	public void calculate(int a,int b)
+	{System.out.println("resut:"+ (a+b));}
+}
+
+class SciCalculator
+{
+	public void calculate(int a,int b)
+	{System.out.println("resut:"+ Math.cos(a+b));}
+}
+class HibCalculator
+{
+	public void calculate(int a,int b)
+	{System.out.println("resut:"+ Math.cos(a+b)+" and "+ (a+b));}
+}
+
+
+public class Calcies {
+      public static void main(String[] args) {
+    	  Calculator c1=new Calculator();
+    	  c1.calculate(15,15);
+    	  SciCalculator s1=new SciCalculator();
+    	  s1.calculate(15,15);
+    	  HibCalculator h1=new HibCalculator();
+    	  h1.calculate(15,15);
+    	  
+	}
+}
