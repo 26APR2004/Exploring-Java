@@ -1,0 +1,11 @@
+//use a built-in package in java to write a class which display a message (by using sout) after taking input from the user  
+package com.Silver_Oak;
+import java.util.Scanner;
+public class Built_In_Package {
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Message:");
+		String s1=sc.nextLine();
+		System.out.println(s1);
+	}
+}
