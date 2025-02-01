@@ -1,0 +1,37 @@
+// Multi Threading in java by extending InBuilt Thread class with there methods- run() and start().
+package com.Silver_Oak;
+
+class UseThread_1 extends Thread
+{
+	@Override
+	public void run()
+	{
+		int i=0;
+		while(i<400)
+		{System.out.println("Doenloading File 1 ...");
+		i++;}
+	}
+	
+}
+
+class UseThread_2 extends Thread
+{
+	@Override
+	public void run()
+	{
+		int i=0;
+		while(i<400)
+		{System.out.println("Doenloading File 2 ...");
+		i++;}	
+		}
+	
+}
+public class MultiThreading{
+        public static void main(String[]args)
+        {
+        	UseThread_1 t1=new UseThread_1();
+        	UseThread_2 t2=new UseThread_2();
+        	t1.start();
+        	t2.start();
+        }
+}
