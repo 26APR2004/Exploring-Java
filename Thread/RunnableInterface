@@ -1,0 +1,36 @@
+//Multi Threading in java by implimenting InBuilt reunnable interface with there methods- run() and start().
+package com.Silver_Oak;
+
+class UseRunnable_1 implements Runnable
+{
+	public void run()
+	{
+		int i=0;
+		while(i<400)
+	     {System.out.println("Downloading file 1......");i++;}
+	
+	}
+}
+class UseRunnable_2 implements Runnable
+{
+	public void run()
+	{
+		int i=0;
+		while(i<400)
+		{ System.out.println("Downloading file 2......");i++;}	}
+}
+public class RunnableInterface {
+    public static void main(String[]args)
+    {
+    	UseRunnable_2 b1 =new UseRunnable_2();
+    	Thread g1=new Thread(b1);
+    	UseRunnable_1 b2 =new UseRunnable_1();
+    	Thread g2=new Thread(b2);
+    	g1.run();
+    	g2.run();
+    	
+
+
+    	
+    }
+}
