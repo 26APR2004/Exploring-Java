@@ -1,0 +1,25 @@
+// Use of Constructors in Runnable Interface -Thread(Runnable r,String name)
+package com.Silver_Oak;
+
+class use_RConctructor implements Runnable
+{
+	@Override
+	public void run()
+	{
+		int i=0;
+		while(i<14)
+	     {System.out.println("file 1......");
+	     i++;}
+	}
+}
+public class RunnambleConstructor {
+  public static void main(String[] args) {
+	  use_RConctructor r1=new use_RConctructor();
+	  Thread t1=new Thread(r1,"Low Thread");
+	  t1.start();
+	  System.out.println(t1.getName());
+	  System.out.println(t1.getId());
+	  
+	  
+}
+}
