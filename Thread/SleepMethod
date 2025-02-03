@@ -1,0 +1,34 @@
+// Demostrarting the use of sleep() method in java 
+package com.Silver_Oak;
+class Mythread_4 extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i<40;i++)
+		System.out.println("Downloading Compiler 1");
+		try {
+			 Thread.sleep(200);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+}}
+class Mythread_5 extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i<40;i++)
+		System.out.println("Downloading Compiler 2");
+		try {
+			 Thread.sleep(4000);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+}}
+public class SleepMethod {
+        public static void main(String[] args) {
+        	Mythread_4 t=new Mythread_4();
+        	Mythread_5 t1=new Mythread_5();
+        	t.start();
+        	t1.start();
+		}
+}
