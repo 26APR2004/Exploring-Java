@@ -1,0 +1,51 @@
+// Demostrarting the use of join() method in java 
+// join()-it's complete the overall one method then go to the next
+package com.Silver_Oak;
+class MyThread1 extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i<40;i++)
+		System.out.println("Downloading Compiler 1");	}
+}
+class MyThread2 extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i<40;i++)
+		System.out.println("Downloading Compiler 2");	}
+}
+class MyThread3 extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i<40;i++)
+		System.out.println("Downloading Compiler 3");	}}
+public class JoinMethod {
+       public static void main(String[]args)
+       {
+    	   MyThread1 t1=new MyThread1(); 
+    	   MyThread2 t2=new MyThread2(); 
+    	   MyThread3 t3=new MyThread3(); 
+
+    	   t1.start();
+    	   try
+    	   {
+    		   t1.join();
+    	   }
+    	   catch(Exception e)
+    	   {
+    		   System.out.println(e);
+    	   }
+    	   t2.start();
+    	   try
+    	   {
+    		   t2.join();
+    	   }
+    	   catch(Exception e)
+    	   {
+    		   System.out.println(e);
+    	   }
+    	   t3.start();
+       }
+}
