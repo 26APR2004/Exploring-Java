@@ -1,0 +1,49 @@
+// Write a program to print "good morning" and "welecome" continuously on the screen in java using threads.
+package com.Silver_Oak;
+
+class Test_1 extends Thread
+{
+	@Override
+	public void run()
+	{
+		int i=0;
+		while(i<40)
+		{
+		System.out.println("Good Morning");
+		i++;}
+	}
+}
+class Test_2 extends Thread
+{
+	
+	@Override
+	public void run()
+	{
+		int i=0;
+		while(i<40)
+		{
+		System.out.println("Welcome");
+		i++;}
+		try
+		{
+			Thread.sleep(200);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+}
+public class PracticeThread_1 {
+	public static void main(String[]args)
+	{
+		
+	Test_2 t2=new Test_2();
+	t2.start();
+	Test_1 t1=new Test_1();
+	t1.start();
+	
+	}
+	
+	
+}
