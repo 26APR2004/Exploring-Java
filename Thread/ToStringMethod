@@ -1,0 +1,50 @@
+//  Use of Priority threads in java program-MAX_PRIORITY,MIN_PRIORITY,NORM_PRIORITY
+// Methods-run(),start(),getName(),setPriority()
+// Demostrarting the use of toString() method in java 
+// toString()- return threads ID,NAME,PRIORITY(IN NUMBER)..
+package com.Silver_Oak;
+
+class Use_PriorityThraed extends Thread
+{
+	Use_PriorityThraed(String name)  
+	{
+		super(name);
+	}
+	
+	public void run()
+	{
+		int i=0;
+		while(i<40)
+		{
+		System.out.println("file ..."+getName());
+		i++;
+		}
+		
+	}
+}
+public class ToStringMethod {
+  public static void main(String[] args) {
+       // Creating multiple threads t1,t2,t3,t4,t5
+	  Use_PriorityThraed t1=new Use_PriorityThraed("H1");
+	  Use_PriorityThraed t2=new Use_PriorityThraed("H2");
+	  Use_PriorityThraed t3=new Use_PriorityThraed("H3");
+	  Use_PriorityThraed t4=new Use_PriorityThraed("H4");
+	  Use_PriorityThraed t5=new Use_PriorityThraed("H5");
+	   t3.setPriority(Thread.MAX_PRIORITY);    // seatting MAX_PRIORITY to the t3 thread
+	   t2.setPriority(Thread.NORM_PRIORITY);    // seatting NORM_PRIORITY to the t2 thread
+	   t1.setPriority(Thread.MIN_PRIORITY);    // seatting MIN_PRIORITY to the t1 thread
+	   t4.setPriority(Thread.MIN_PRIORITY);
+	   t5.setPriority(Thread.MIN_PRIORITY);
+	   t1.start();
+	   t2.start();
+	   t3.start();
+	   t4.start();
+	   t5.start();
+	   
+	       	  System.out.println(t1.toString());
+	      	   System.out.println(t2.toString());
+	      	   System.out.println(t3.toString());
+	      	   System.out.println(t4.toString());
+	      	   System.out.println(t1.getId());   
+}
+}
