@@ -1,0 +1,46 @@
+// Demonstrate getPriority() and setPriority() methods in java Threads and also display the Threads state 
+// state in Thread- t2.getState()---OutPut-New/Runnable
+package com.Silver_Oak;
+
+class Test_3 extends Thread
+{
+	public void rub()
+	{
+       for(int i=0;i<40;i++)
+    	  System.out.println("File..1");
+	}
+}
+class Test_4 extends Thread
+{
+	public void rub()
+	{
+       for(int i=0;i<40;i++)
+    	  System.out.println("File..2");
+	}
+}
+class Test_5 extends Thread
+{
+	public void rub()
+	{
+       for(int i=0;i<40;i++)
+    	  System.out.println("File..3");
+	}
+}
+public class PracticeThre_2 {
+     public static void main(String[]args)
+     {
+    	 Test_3 t3=new Test_3();
+    	 Test_4 t4=new Test_4();
+    	 Test_5 t5=new Test_5();
+    	 t3.setPriority(10);  //Max Priority
+    	 t4.setPriority(1);//Min Priority
+    	 t5.setPriority(5);//Norm Priority
+    	 
+    	 System.out.println(t3.getPriority());
+    	 System.out.println(t4.getPriority());
+    	 System.out.println(t5.getPriority());
+    	 System.out.println(t5.getState());
+    	 t5.start();
+    	 System.out.println(t5.getState());
+     }
+}
