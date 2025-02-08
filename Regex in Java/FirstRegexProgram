@@ -1,0 +1,13 @@
+// Regex in java program we use  class- Pattern,Matcher[matches()]
+package Regex;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+public class FirstRegexProgram {
+    public static void main(String[]args)
+    {
+    	Pattern p= Pattern.compile("s{3,5}");
+    	Matcher m=p.matcher("ssssss");
+    	boolean result= m.matches();
+    	System.out.println("result is:"+result);
+    }
+}
