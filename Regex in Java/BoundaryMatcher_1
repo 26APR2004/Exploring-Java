@@ -1,0 +1,15 @@
+// More in deep
+package Regex;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class BoundaryMatcher_1 {
+    public static void main(String[]args)
+    {
+    	 boolean result=Pattern.matches("^[Ss].*y$", "Sun is shining today");
+    	 boolean result1=Pattern.matches("^[Mm]oon.*y$", "Moon is shining today");
+
+    	 System.out.println(result);
+    	 System.out.println(result1);
+    }
+}
