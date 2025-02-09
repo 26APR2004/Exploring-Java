@@ -1,0 +1,22 @@
+// Use predifined Character classes -(\d,\D)
+package Regex;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class SearchNumbersInText {
+  public static void main(String[] args) {
+	  Pattern p= Pattern.compile("\\d+");  //Match one or more digits
+	  Matcher m=p.matcher("My phone number is 7620520111");
+	  if(m.find())
+		  System.out.println(m.group());
+	  else
+		  System.out.println("This message does't contain an numbers");
+      
+	  Pattern p1= Pattern.compile("\\D+");  // It diaplay all the text without digits
+	  Matcher m1=p1.matcher("My phone number is +917620520111");
+	  if(m1.find())
+		  System.out.println(m1.group());
+	  else
+		  System.out.println("This message only contain numbers ");
+}
+}
