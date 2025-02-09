@@ -1,0 +1,19 @@
+//Demonstration of Boundary matches -Pattern,Matcher[find()]-->(\b,\B)
+package Regex;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class UseFindMethod {
+  public static void main(String[] args) {
+	     Pattern p=Pattern.compile("\\b[sS]un|[mM]oon\\b"); //Matches 'Sun..' as a whole word
+	     Matcher m=p.matcher("Today Moon is very shine!");
+	     boolean result=m.find();
+	     if(result)
+	     System.out.println(" Search Word \""+m.group()+"\" is found.");
+	     else
+		 System.out.println(" Search Word is not found?");
+
+	    
+
+}
+}
