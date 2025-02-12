@@ -1,0 +1,37 @@
+//Create RE that accept alphanumeric characters only
+package Regex;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class Practice_1 {
+	public static void matchStringWithRegex(String str,String re)
+	{
+		
+		Pattern p=Pattern.compile(re);
+		Matcher m=p.matcher(str);
+		boolean result=m.matches();
+		System.out.println(result);
+		
+		
+				
+	}
+     public static void main(String[]args)
+     {
+    	 while(true) {
+    	 Scanner sc=new Scanner(System.in);
+    	 System.out.println("Enter the Regex Pattern:");
+    	 String reg=sc.next();
+    	 sc.nextLine();
+    	 System.out.println("Enter the String:");
+    	 String str=sc.nextLine();
+    	 
+    	 matchStringWithRegex(str,reg);
+    	 System.out.println("You want to exit(Y/N)");
+ 		String choice=sc.nextLine();
+ 		if(choice.equalsIgnoreCase("Y"))
+ 			break;
+    	 }
+ 		
+     }
+}
