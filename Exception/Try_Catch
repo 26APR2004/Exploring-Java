@@ -1,0 +1,27 @@
+// Demonstration of Try & Catch block to handle Exception in java
+package com.Silver_Oak;
+import java.util.Scanner;
+public class Try_Catch {
+  public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.print("Enter the number:");
+	   int a=sc.nextInt();
+	   System.out.print("Enter the number:");
+	   int b=sc.nextInt();
+	   // using normaly
+//	   int c=a/b; 
+//	    System.out.println("resutl:"+c);
+	   //Using try catch block
+	   try
+	   {
+		    int c=a/b; 
+		    System.out.println("resutl:"+c);
+	   }
+	   catch(Exception e)
+	   {
+		   System.out.println("Not difine");
+		   //System.out.println(e);
+	   }
+	   System.out.println("End");
+}
+}
