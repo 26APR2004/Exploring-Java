@@ -1,0 +1,35 @@
+// Demonstration of Specific Exception
+package com.Silver_Oak;
+import java.util.Scanner;
+public class SpecificException {
+   public static void main(String[] args) {
+	   int arr[ ]= {1,12,23,34};
+	   
+	    Scanner sc=new Scanner(System.in);
+	      System.out.println("Enter the number:");
+	      int a=sc.nextInt();
+	      System.out.println("Enter the index of arr:");
+	      int index=sc.nextInt();
+	      System.out.println();
+	      try
+	      {
+
+	    	  System.out.println("value of array at Index:"+arr[index]);
+	    	  System.out.println("Division od number and arr:"+arr[index]/a);
+
+	    	  
+	      }
+	      catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("This is ArrayIndexOutOfBoundsException");
+		}
+	      catch (ArithmeticException e) {
+			System.out.println("This is ArithmeticException");
+		}
+	      catch(Exception e)
+	      {
+	    	  System.out.println("An Error is occoure");
+	    	  System.out.println(e);
+	      }
+	      
+}
+}
