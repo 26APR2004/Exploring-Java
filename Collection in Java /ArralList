@@ -1,0 +1,47 @@
+package com.Silver_Oak;
+import java.util.*;
+public class ArralListMethods {
+ 
+
+public static void main(String args[])
+  {
+	  ArrayList<Integer>l1=new ArrayList<>();
+	  ArrayList<Integer>l2=new ArrayList<>(5);
+      l2.add(11);
+      l2.add(12);
+      ArrayList<Integer>l3=new ArrayList<>(5);
+      l3.add(11);
+      l3.add(12);
+      
+	  l1.add(2);   //add()
+	  l1.add(4);
+	  l1.add(6);
+	  l1.add(8);
+	  l1.add(1,3);  //add(index,element)
+	  l1.addFirst(3);  //addFirst()
+	  l1.addLast(10);   //addLast()
+	  l1.addAll(l2);    // addAll(arraylist)
+	  //l3.clear();
+	  
+	  System.out.println("Verfi:"+l1.contains(15));  //contains(element)
+	  System.out.println("make clone:"+l1.clone());       //clone()
+	  System.out.println("Equal:"+l2.equals(l3));     //equals()
+	  System.out.println("First element:"+l2.getFirst());     //getFirst()
+	  System.out.println("Last element:"+l2.getLast());
+	  System.out.println("Hashcode for list:"+l2.hashCode());
+	  System.out.println("Index of element:"+l1.indexOf(3));      //indexOf(element)
+	  System.out.println("Index of last element:"+l1.lastIndexOf(3));
+	  System.out.println("Verfi list is empty:"+l3.isEmpty());
+	  System.out.println("Remove element:"+l1.remove(2));       //remove(index)
+	  System.out.println("Remove element:"+l1.set(2,4));       
+
+	  //l1.clear();
+	  //Dispaly
+	  for(int i=0;i<l1.size();i++)     //size()
+	  {
+		  System.out.print(l1.get(i));    // get()
+		  System.out.print(",");
+		  
+	  }
+  }
+}
