@@ -1,0 +1,12 @@
+// Write java program to verify entered number is integer
+package recap;
+import java.util.Scanner;
+public class ExaersiceQ4 {
+ public static void main(String[]args)
+ {
+	 Scanner sc=new Scanner(System.in);
+	 System.out.println("Enetr the number:");
+	 boolean a=sc.hasNextInt();
+	 System.out.println(a);
+ }
+}
