@@ -1,0 +1,23 @@
+// Write java program to calculate the CGPA of five subjects
+package recap;
+import java.util.Scanner;
+public class Exercise2Q {
+ public static void main(String[]args)
+ {
+	 Scanner sc=new Scanner(System.in);
+	 System.out.println("Enter the five subjet marks:");
+	 float a=sc.nextFloat();
+	 float b=sc.nextFloat();
+	 float c=sc.nextFloat();
+	 float d=sc.nextFloat();
+	 float e=sc.nextFloat();
+	 
+	 float total=a+b+c+d+e;
+	 
+	 float cgpa=total/50;
+	 
+	 System.out.println("CGPA is:"+cgpa);
+ }
+ 
+ 
+}
