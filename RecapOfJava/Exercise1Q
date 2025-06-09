@@ -1,0 +1,20 @@
+// Q1.Write java program to calculate of sum of three numbers
+package recap;
+import java.util.Scanner;
+public class Exercise1Q {
+ public static void main(String[]args)
+ {
+	 Scanner sc=new Scanner(System.in);
+	 System.out.println("Enter the number 1:");
+	 int a=sc.nextInt();
+	 System.out.println("Enter the number 2:");
+	 int b=sc.nextInt();
+	 System.out.println("Enter the number 3:");
+	 int c=sc.nextInt();
+	 
+	 int sum=a+b+c;
+	 System.out.println("Addition of three numbers:"+sum);
+
+
+ }
+}
