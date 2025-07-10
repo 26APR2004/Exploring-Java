@@ -1,0 +1,34 @@
+package Collection_Exploration;
+import java.util.*;
+class ArrayList_InJava {
+  public static void main(String[]args)
+  {
+	  ArrayList<String>list=new ArrayList<>();  //Decalring an ArrayListr
+	  list.add("Pen");
+	  list.add("Pencil");   //Inserting Element in ArrayList
+	  list.add("Book");
+	  list.add("Football");
+	  
+	  ArrayList<String>Extra=new ArrayList<>(2);
+	  Extra.add("File");
+	  Extra.add("Notbook");
+	  
+	  list.addAll(Extra);   // Attach data with other one
+//	  list.clear();   //Delete all data from list
+	  
+	  System.out.println(list.contains("Book"));  // Verify the list contain the Element
+	  
+      System.out.println("Index:"+list.indexOf("File"));  // Return index of element
+      System.out.println("Index:"+list.indexOf("Pen"));
+      
+//      list.remove(0);     // Delete element
+      
+      list.set(0,"Headseat");   // Set value without an change
+
+	  // Display ArrayList
+	  for (int i = 0; i <list.size(); i++) {
+		  System.out.print(list.get(i)+" ");
+	}
+  }
+}
+
