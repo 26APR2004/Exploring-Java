@@ -1,0 +1,30 @@
+package Collection_Exploration;
+import java.util.LinkedList;
+public class LinkedList_InJava {
+    public static void main(String[] args) {
+		  LinkedList<Integer>list=new LinkedList<>();
+		  list.add(100);
+		  list.add(101);
+		  list.add(102);
+		  
+		  list.addFirst(99);// 	Extra method
+		  list.addLast(103); // Extra method
+		  
+//		  list.removeLast(); 
+//		  list.removeFirst();
+		  
+//		  list.remove(1);    //Delete an Element
+		  
+		  System.out.println(list.contains(100));  // 	Verification
+		  
+		  System.out.println("Index:"+list.indexOf(102));
+		  
+		  for (int i = 0; i < list.size(); i++) {
+			  System.out.print(list.get(i)+" ");
+			
+		}
+		  
+		  
+		  
+	}
+}
