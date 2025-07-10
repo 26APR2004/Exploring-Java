@@ -1,0 +1,38 @@
+package DataStructure;
+
+public class DS_4 {
+	static void Pattern_1(int n)
+	{
+		for (int i = 1; i <n; i++) {
+			for (int j = 1; j <=i; j++) {
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+	}
+	static void Pattern_2(int n)
+	{
+		for (int i = 1; i <n; i++) {
+			for (int j = n; j>i;j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+	static void Pattern_3(int n)
+	{
+		for (int i = 1; i <n; i++) {
+			for (int j = n; j>i;j--) {
+				System.out.print(n-j+1);
+			}
+			System.out.println();
+		}
+	}
+      public static void main(String[]args)
+      {
+    	 int n=5;
+    	 Pattern_1(n);
+    	 Pattern_2(n);
+    	 Pattern_3(n);
+      }
+}
