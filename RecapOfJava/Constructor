@@ -1,0 +1,14 @@
+package recap;
+//  1.Use of Constructor
+// Driver class
+public class Constructor_1Deep_Recap {
+	// Default Constructor
+	Constructor_1Deep_Recap()
+	{
+		System.out.println("Constructor is called!");
+	}
+  public static void main(String[] args) {
+	
+	  Constructor_1Deep_Recap obj=new Constructor_1Deep_Recap();
+}
+}
