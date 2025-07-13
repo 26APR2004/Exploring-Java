@@ -1,0 +1,33 @@
+package recap;
+ class Parent
+ {
+	 public void func()
+	 {
+		 System.out.println("Parent.func()");
+	 }
+	 public void func(int a)
+	 {
+		 System.out.println("Parent.func(int):"+a);
+	 }
+ }
+ class Child extends Parent
+ {
+	 @Override
+	 public void func(int a)
+	 {
+		 System.out.println("Parent.func(int):"+a);
+	 }
+ }
+public class Polymorphism_Recap {
+  public static void main(String[] args) {
+	Child obj=new Child();
+	Parent obj_1=new Parent();
+	
+	// Method Overrloading
+	obj_1.func();
+	obj_1.func(13);
+	
+	// Method Overriding
+	obj.func(12);
+}
+}
