@@ -1,0 +1,31 @@
+package recap;
+
+// Super class
+class  Animal
+{
+	void eat()
+	{
+		System.out.println("Eating food...!");
+	}
+	void sleep()
+	{
+		System.out.println("Sleeping...!");
+	}
+}
+// Sub class
+class Dog extends Animal
+{
+	void bark()
+	{
+		System.out.println("Barking..!");
+	}
+}
+public class Inheritance_Recap {
+   public static void main(String[] args) {
+	Dog obj=new Dog();
+	obj.sleep();
+	obj.eat();
+	obj.bark();
+			
+}
+}
