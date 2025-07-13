@@ -1,0 +1,36 @@
+package recap;
+// Encapsulation --> Consist private variable/public method
+class Hide_Data
+{
+	// Private Variables
+	private int id;
+	private String name;
+	private float salary;
+	
+	//Public setter Methods
+	public void set_id(int id) {this.id=id;}
+	public void set_name(String name) {this.name=name;}
+	public void set_salary(float salary){this.salary=salary;}
+	
+	//Public getter Methods
+	public int get_id() {return id;}
+	public String get_name(){return name;}
+	public float get_salary() {return salary;}
+	
+	}
+	
+
+
+public class Encapsulation_Practice {
+   public static void main(String[] args) {
+	    Hide_Data obj=new Hide_Data();
+	    obj.set_id(12);
+	    obj.set_name("Sujal");
+	    obj.set_salary(1000);
+	    
+	    System.out.println(obj.get_id());
+	    System.out.println(obj.get_name());
+	    System.out.println(obj.get_salary());
+	    
+}
+}
