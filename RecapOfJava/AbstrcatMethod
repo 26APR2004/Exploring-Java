@@ -1,0 +1,40 @@
+package recap;
+
+abstract class Vehicle
+{
+	// Abstract method
+	abstract void _acelerate();
+	abstract void _break();
+	
+	//common behavoir
+	public void start()
+	{
+		System.out.println("Engine is Starting...");
+	}
+}
+
+class Car extends Vehicle
+{
+
+	@Override
+	void _acelerate() {
+		System.out.println("Speed is increasing!");
+		
+	}
+
+	@Override
+	void _break() {
+		System.out.println("Apllying break!");
+		
+	}
+	
+}
+public class Abstract_Concept {
+ public static void main(String[] args) {
+	Vehicle obj=new Car();
+	obj.start();
+	obj._acelerate();
+	obj._break();
+	
+}
+}
