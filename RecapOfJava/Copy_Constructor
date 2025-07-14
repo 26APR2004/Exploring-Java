@@ -1,0 +1,33 @@
+package recap;
+
+public class CopyConstructor_InDeep_Recap {
+	
+	int id;
+	String name;
+	
+	CopyConstructor_InDeep_Recap(int _id,String _name)
+	{
+		this.name=_name;
+		this.id=_id;
+	}
+	
+	// Copy Constructor
+	CopyConstructor_InDeep_Recap(CopyConstructor_InDeep_Recap obj)
+	{
+		this.name=obj.name;
+		this.id=obj.id;
+	}
+	
+	
+    public static void main(String[] args) {
+		
+     // Object of Parameterized Constructor
+    	CopyConstructor_InDeep_Recap obj=new CopyConstructor_InDeep_Recap(10,"Sujal");
+    	System.out.println("Parameterized Constructor: "+obj.name+" And "+obj.id);
+    	
+    // 	Object of Copy Constructor
+    	CopyConstructor_InDeep_Recap _obj=new CopyConstructor_InDeep_Recap(obj);
+    	System.out.println("Copy Constructor: "+_obj.name+" And "+_obj.id);
+
+	}
+}
