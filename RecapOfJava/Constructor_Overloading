@@ -1,0 +1,30 @@
+package recap;
+
+
+public class ConstructorOverrloading_deep_Recap {
+	
+	ConstructorOverrloading_deep_Recap(String name)
+	{
+		System.out.println("Argument with one:"+name);
+	}
+	
+	ConstructorOverrloading_deep_Recap(String name,long id)
+	{
+		System.out.println("Argument with two:"+name);
+		System.out.println("Argument with two:"+id);
+	}
+	
+	ConstructorOverrloading_deep_Recap(int age)
+	{
+		System.out.println("Argument with one age:"+age);
+	}
+  public static void main(String[] args) {
+	  ConstructorOverrloading_deep_Recap obj=new ConstructorOverrloading_deep_Recap("Sujal");
+	  
+	  ConstructorOverrloading_deep_Recap obj_1=new ConstructorOverrloading_deep_Recap("Sujal",12);
+	  
+	  ConstructorOverrloading_deep_Recap obj_3=new ConstructorOverrloading_deep_Recap(20);
+
+
+}
+}
