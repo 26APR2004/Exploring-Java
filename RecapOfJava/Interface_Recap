@@ -1,0 +1,43 @@
+package userDefinedPackage;
+
+interface Vehicle
+{
+	// data members -final/static/public
+	final int tires=4;
+	final int headlites=4;
+	
+	void start();
+	abstract int no_tires(int tires);
+	abstract int no_headlites(int headlites);
+}
+
+class Car implements Vehicle
+{
+
+	@Override
+	public void start() {
+          System.out.println("Car is Engine is starting..!");
+		
+	}
+
+	@Override
+	public int no_tires(int tires) {
+		System.out.println("No. of Tires car consist:"+tires);
+		return 0;
+	}
+
+	@Override
+	public int no_headlites(int headlites) {
+		System.out.println("No. of headLites car consist:"+headlites);
+		return 0;
+	}
+	
+}
+public class Interface_Recap {
+    public static void main(String[] args) {
+		Car obj=new Car();
+		obj.start();
+		obj.no_tires(8);
+		obj.no_headlites(5);
+	}
+}
