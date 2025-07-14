@@ -1,0 +1,18 @@
+package recap;
+//Use of Parameterized Constructor
+public class ParametConstructor_Deep_Recap {
+
+	// Instance Variables
+	int id;
+	String name;
+	// Parametrized Constructor
+	public ParametConstructor_Deep_Recap(int _id,String _name) {
+		this.name=_name;
+		this.id=_id;
+	}
+	
+	public static void main(String[] args) {
+		ParametConstructor_Deep_Recap obj=new ParametConstructor_Deep_Recap(001,"Sujal");
+		System.out.println("Name:"+obj.name+"\nID:"+obj.id);
+	}
+}
