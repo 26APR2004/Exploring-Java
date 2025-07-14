@@ -1,0 +1,38 @@
+package recap;
+
+public class Employee {
+	
+	// Instance Variable(non-Static)
+	public String name;
+	public float salary;
+	
+	// Constructor
+	public Employee(String n,float sal) {
+		this.name=n;
+		this.salary=sal;
+	}
+	
+	//Setter Method
+	public void setName(String n) {this.name=n;}
+	public void setSalary(float sal) {this.salary=sal;}
+	
+	//Getter Method
+	public String getName() {return name;}
+	public float getSalary() {return salary;}
+	
+	// Instance Method
+	public void Display()
+	{
+		System.out.println("Employee name:"+name+"\n"+"Employee salary:"+salary);
+	}
+  public static void main(String[] args) {
+	  Employee e1=new Employee("Sujal",23000f);
+	  System.out.println(e1.getName());
+	  System.out.println( e1.getSalary());
+	  e1.setName("Sahil");
+	  e1.setSalary(2500);
+	  
+//	  e1.Display();
+	  
+}
+}
