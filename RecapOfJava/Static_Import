@@ -1,0 +1,14 @@
+// Use of Static import
+// System class without Class name
+package userDefinedPackage;
+import static java.lang.Math.*;
+import static java.lang.System.*;
+import static java.util.Scanner.*;
+public class Static_Import {
+      public static void main(String[] args) {
+		   out.println(sqrt(4));
+		   out.println(max(12,34));
+		   out.println(min(12,34));
+		   
+	}
+}
