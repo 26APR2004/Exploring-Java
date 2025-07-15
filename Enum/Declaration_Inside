@@ -1,0 +1,15 @@
+// USE enum in java- Declaration Inside the class
+package Area;
+
+public class Enum_In_Java1 {
+	enum Color
+	{
+		RED,BLUE,YELLOW,PINK;
+	}
+  public static void main(String[] args) {
+	  Color c1=Color.RED;
+	  Color c2=Color.BLUE;
+	System.out.println(c1);
+	System.out.println(c2);
+}
+}
