@@ -1,0 +1,14 @@
+// use of for loop to display values in enum
+package Area;
+enum Planets
+{
+	MERCURY,VENUS,EARTH,MARS,JUPITER,SATURN,URANUS,NEPTUNE;
+}
+public class Loop_In_Enum {
+    public static void main(String[] args) {
+		 for(Planets p : Planets.values())
+		 {
+			 System.out.println(p);
+		 }
+	}
+}
