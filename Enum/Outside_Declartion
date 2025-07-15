@@ -1,0 +1,13 @@
+// USE enum in java- Declaration outside the class
+package Area;
+enum Color
+{
+	RED,BLUE,BLACK,PINK;
+}
+
+public class Enum_In_Java {
+  public static void main(String[] args) {
+	  Color C1=Color.RED;
+	  System.out.println(C1);
+}
+}
