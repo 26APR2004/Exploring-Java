@@ -1,0 +1,57 @@
+// Use of Enum in switch
+package Area;
+import java.util.Scanner;
+enum Day
+{
+	MONDAY,
+	SUNDAY,
+	TUESDAY,
+    WENSDAY,
+	THURSDAY,
+	FRIDAY,
+	SATURDAY;
+}
+public class Enum_Use_In_Switch {
+    Day day;
+    
+    // Constructor
+    Enum_Use_In_Switch(Day day)
+    {
+    	this.day=day;
+    }
+    
+    public void dayIsLike()
+    {
+    	   switch(day) {
+    	   case MONDAY:
+    		   System.out.println("Moaday's are bad");
+    		   break;
+    	   case TUESDAY:
+    		   System.out.println("Tusday's are boring");
+    		   break;
+    	   case WENSDAY:
+    		   System.out.println("Wensday's are Fake");
+    		   break;
+    	   case THURSDAY:
+    		   System.out.println("Thursday's are sweet");
+    		   break;
+    	   case SATURDAY:
+    		   System.out.println("Saturday's are Free");
+    		   break;
+    	   default:
+    		   System.out.println("Free from life");
+    		   break;
+    	   }
+    	  
+    	   
+    }
+    public static void main(String[]args)
+	   {
+		  Scanner sc=new Scanner(System.in);
+		  System.out.println("Enter the day:");
+		  String str=sc.next();
+		  Enum_Use_In_Switch d1=new Enum_Use_In_Switch(Day.valueOf(str));
+		  d1.dayIsLike();
+	   }
+ 
+}
