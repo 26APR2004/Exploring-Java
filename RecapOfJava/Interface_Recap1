@@ -1,0 +1,36 @@
+package radiobutton;
+
+interface Phone
+{
+	void call();
+	void message();
+	
+}
+class SmartPhone implements Phone
+{
+
+	@Override
+	public void call() {
+	     System.out.println("Calling through SmartPhone..!");
+			}
+
+	@Override
+	public void message() {
+	System.out.println("Texting Message..!");
+			}
+	public void videoCall()
+	{
+		System.out.println("Video calling...!");
+	}
+	
+}
+
+public class Interfcae_Recap1 {
+  public static void main(String[] args) {
+	SmartPhone s1=new SmartPhone();
+	s1.call();
+	s1.videoCall();
+	s1.message();
+}
+}
+
