@@ -1,0 +1,19 @@
+package com.AshwinChougule;
+import java.util.*;
+public class CountDigits_ByLog {
+	
+	public static int count(int cn)
+	{
+		int cnt= (int) (Math.log10(cn)+1);
+		return cnt;
+	}
+	
+  public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("Enter the number:");
+	   int num=sc.nextInt();
+	  
+	   System.out.println("Digit of counts:"+count(num));
+	   
+}
+}
