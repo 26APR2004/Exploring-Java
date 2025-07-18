@@ -1,0 +1,22 @@
+package com.AshwinChougule;
+import java.util.Scanner;
+public class Print_all_Divisor {
+	   
+	// Print all Divisor
+public static void print_all_number(int num)
+{
+	for (int i = 1; i <=num; i++) {
+		 if(num%i==0)
+		 {
+			 	System.out.print(i+" ");
+		 }
+	}
+}
+
+  public static void main(String[] args) {
+	  Scanner sc=new Scanner(System.in);
+	  System.out.println("Enter the number:");
+	  int num=sc.nextInt();
+	  print_all_number(num);
+}
+}
