@@ -1,0 +1,23 @@
+package com.AshwinChougule;
+import java.util.*;
+public class Print_Divisor {
+	
+	public static void divsor(int n)
+	{
+		for (int i = 1; i <=Math.sqrt(n); i++) {
+		
+			System.out.println(i);
+			if(n/i!=i)
+			System.out.println(n/i);
+		}
+	}
+  public static void main(String[] args) {
+	  List<Integer> a=new ArrayList<>();
+	  	Scanner sc=new Scanner(System.in);
+	  	System.out.println("Enter the number:");
+	  	int num=sc.nextInt();
+	  	
+	  	
+	     divsor(num);
+}
+}
