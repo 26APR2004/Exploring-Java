@@ -1,0 +1,21 @@
+package com.AshwinChougule;
+
+public class Reverse_Number {
+public static void main(String[] args) {
+	   int sum=0;
+	   int n=101;
+	   int count=0;
+	   while (n>0) {
+		count+=1;
+		n/=10;
+	}
+	   System.out.println(count);
+	   int c=count;
+	   while(n>0)
+		   {
+		      sum+=Math.pow(n,c);
+		      n/=10;
+		   }
+	   System.out.println(sum);
+}
+}
