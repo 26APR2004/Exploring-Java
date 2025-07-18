@@ -1,0 +1,70 @@
+package com.AshwinChougule;
+import java.util.*;
+public class CountDigits_ByLog {
+	
+	public static int count(int cn)
+	{
+		int cnt= (int) (Math.log10(cn)+1);
+		return cnt;
+	}
+	
+	public static int reverse(int cn)
+	{
+		int rev_num=0;
+		while (cn>0) {
+			int last_digit=cn%10;
+			cn/=10;
+			rev_num=(rev_num*10)+last_digit;
+		}
+		return rev_num;
+	}
+	
+	public static boolean isPlaindrome(int cn)
+	{
+		int dum=cn;
+		int reverse=0;
+		boolean result=false;
+		while (cn>0) {
+			int last_digit=cn%10;
+			cn/=10;
+			reverse=(reverse*10)+last_digit;
+		}
+		if(reverse==dum)
+		{
+			result=true;
+			return result;
+		}
+		return result;
+		
+	}
+	
+	public static boolean isArmstrong(int cn)
+	{
+		int dum=cn;
+		int sum=0;
+		int k=String.valueOf(cn).length();
+
+		while (cn>0) {
+			int last_digit=cn%10;
+			sum+=Math.pow(last_digit,k);
+		
+			cn/=10; 
+		}
+
+	return sum==dum?true:false ;   //ternary operator
+		
+	}
+  public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("Enter the number:");
+	   int num=sc.nextInt();
+	   
+//	   System.out.println("Digit of counts:"+count(num));
+//	   
+//	   System.out.println("Reversed Number:"+reverse(num));
+//	   
+//	   System.out.println("Palindrome or not:"+isPlaindrome(num));
+	   
+	   System.out.println("Armstrong or not:"+isArmstrong(num));
+}
+}
