@@ -1,0 +1,88 @@
+// Data Structur : Stack 
+package Data_Structure;
+import java.util.Scanner;
+
+public class Stack_DS {
+	
+	static final int maxsize=100;
+	static int []stack=new int[maxsize];    // Intialize Stack Array
+	static int index=-1;                    // Assaign Index as -1
+	
+	// Push Method
+	public static void push()
+	{
+		Scanner s1=new Scanner(System.in);
+		
+		if(index==maxsize-1)                            // Codition to verifiy Stack Is overflow or what?
+		{
+			System.out.println("Stack is Overflow");
+		}
+		else                                            // If the stack is not full then inserting an Element
+		{
+			System.out.println("Enter element in Stack:");
+			index++;
+			
+			int stack_element=s1.nextInt();
+			stack[index]=stack_element;
+			
+			
+			
+			
+		}
+	}
+	
+// POP elements from stack
+public static void pop()
+{
+	if(index==-1)
+	{
+		System.out.println("Stack is Enpty!");
+	}
+	else
+	{
+		int n=stack [index];
+		index--;
+		System.out.println("Element is Deleted..."+n);
+	}
+}
+
+// To dispaly methods
+public static void display()
+{
+	if(index==-1)
+	{
+		System.out.println("Array is Empty!");
+	}
+	else
+	{
+		System.out.println("Elements of stack:");
+	for (int i = index;i>=0;i--) {
+		System.out.println(stack[i]+" ");
+	}
+	System.out.println(" ");
+	}
+}
+ public static void main(String[] args) {
+
+	
+Scanner sc=new Scanner(System.in);
+System.out.println("\n1.Insert\n2.Delete\n3.Display\n4.Exit");
+boolean f=true;
+
+while(f) {
+System.out.println("Enter the Choice:");
+int choice=sc.nextInt();
+
+switch (choice) {
+case 1: push(); break;
+case 2: pop(); break;
+case 3: display(); break;
+case 4: f=false; break;
+
+default:
+	System.out.println("Default value");
+	break;
+}
+}
+ }
+}
