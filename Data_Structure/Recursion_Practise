@@ -1,0 +1,49 @@
+// Print Name N times using Recursion
+// Print Number 1-N using Recursion
+//  Print Number N-1 using Recursion
+// Print Number 1-N by using Backtracing
+// Print Number N-1 by using Backtracing
+
+package Data_Structure;
+import java.util.Scanner;
+public class Reccursion_P1 {
+	
+	public static void Name(int i,int n)
+	{
+		 // Base condition
+		if(i>n)
+			return;
+		System.out.print("Sujal"+" ");
+		Name(i+1,n);
+	}
+	
+	public static void Number(int i,int n)
+	{
+		if(i>n)
+			return;
+//		System.out.print(i+" ");
+		Number(i+1,n);
+		System.out.print(i+" ");  // Display numbers in n-1 by Backtracing
+	}
+	
+	
+	public static void Reverse(int i,int n)
+	{
+		if(i<n)
+			return;
+		System.out.print(i+" ");
+		Reverse(i-1, n);
+		//System.out.print(i+" ");   // Display numbers in 1-n by Backtracing
+	}
+	
+  public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the value of n:");
+	int n=sc.nextInt();
+	Name(1,n);
+	System.out.println();
+	Number(1,n);
+	System.out.println();
+	Reverse(n, 1);
+}
+}
