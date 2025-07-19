@@ -1,0 +1,25 @@
+package Data_Structure;
+
+import java.util.Scanner;
+public class HCF_Brute1 {
+	public static int hcf(int a,int b)
+	{
+		int gcd=1;
+		for(int i=1;i<Math.min(a, b);i++)
+		{
+			if(a%i==0 && b%i==0)
+				gcd=i;
+		}
+		return gcd;
+	}
+  public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the number 1 :");
+	int num_1=sc.nextInt();
+	System.out.println("Enter the number 2 :");
+	int num_2=sc.nextInt();
+	
+	System.out.printf("HCF of number %d and %d is:%d",num_1,num_2,hcf(num_1,num_2));
+	
+}
+}
