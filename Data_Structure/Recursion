@@ -1,0 +1,16 @@
+package Data_Structure;
+ // Reccurstion with base condition;
+public class Reccursion_Base_Condition {
+	 static public int count=0;
+	static public void function()
+	{ 
+		if(count==3)
+		return ;
+		System.out.println(count);
+		count++;
+		function();
+	}
+  public static void main(String[] args) {
+	  function();
+}
+}
