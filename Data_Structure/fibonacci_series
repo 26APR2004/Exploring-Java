@@ -1,0 +1,37 @@
+// Dispaly fibonacci series upto N
+// Return fibonacci number from  Nth index
+package Data_Structure;
+import java.util.Scanner;
+public class fibonacci_series {
+	// Return fibonacci number
+	public static int Specific_Fab(int n,int arr[])
+	{
+		if(n<=1)
+			return n;
+		return Specific_Fab(n-1, arr)+Specific_Fab(n-2, arr);
+	}
+	public static void Display_Fab(int n,int arr[])
+	{
+		arr[0]=0;
+		arr[1]=1;
+		 for(int i=2;i<n;i++)
+		 {
+			 arr[i]=arr[i-1]+arr[i-2];
+		 }
+		 
+		 for (int i = 0; i < arr.length; i++) {
+			 System.out.println(arr[i]);
+			
+		}
+	}
+  public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the number:");
+	int num=sc.nextInt();
+	int arr[]=new int[num];
+	
+	
+	Display_Fab(num,arr);
+	System.out.printf("Fab at %d postion is:%d",num,Specific_Fab(num,arr));
+}
+}
