@@ -1,0 +1,24 @@
+package Data_Structure;
+import java.util.Scanner;
+public class CountPrime_No {
+	public static int PrimeCount(int n)
+	{
+		int pcount=0;
+		int count=0;
+		for (int i = 1; i <=n; i++) {
+			for (int j = 1; j <=n; j++) {
+				if(i%j==0)
+				count+=1;
+			}
+			if(count==2)
+				pcount+=1;
+		}
+		return pcount;
+	}
+  public static void main(String[] args) {
+	  Scanner sc=new Scanner(System.in);
+	  System.out.println("Enter the number:");
+	  int n=sc.nextInt();
+	   System.out.println(PrimeCount(n));
+}
+}
