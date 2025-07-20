@@ -1,0 +1,23 @@
+package Data_Structure;
+import java.util.Scanner;
+public class Functional_Recursion {
+
+	static public int fact(int n) {
+	
+		if(n==0)
+			{return 1;}
+		
+		return n*fact(n-1);
+	}
+	
+		
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number:");
+		int num=sc.nextInt();
+		
+		System.out.printf("Fcators of %d number is:%d",num,fact(num));
+	}
+
+}
