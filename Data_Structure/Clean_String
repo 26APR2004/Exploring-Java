@@ -1,0 +1,35 @@
+// Clean After Reverse
+package Data_Structure;
+
+public class Clean_String {
+	
+	
+	public static void revrse(char s[])
+	{
+		int i=0;
+		int j=s.length-1;
+		while(i<j)
+		{
+			char temp=s[i];
+			s[i]=s[j];
+			s[j]=temp;
+			i++;
+			j--;
+		}
+		 
+	}
+     public static void main(String[] args) {
+		 String str="Hello,How are you?";
+		 String clean=str.replaceAll("[^a-zA-Z0-9]","");
+		 System.out.println(clean);
+		 
+		 char s[]=clean.toCharArray();
+		 revrse(s);
+		 
+		 for (char c : s) {
+			 System.out.print(c);
+			
+		}
+		 
+	}
+}
