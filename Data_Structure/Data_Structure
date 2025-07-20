@@ -1,0 +1,18 @@
+// Verfiy the String is palindrome or not;
+package Data_Structure;
+
+public class StringIsPalindrome_Rec {
+	public static boolean Palindromre(int i,char charr[])
+	{
+		if(i==charr.length/2)
+			return true;
+		if(charr[i]!=charr[charr.length-1-i])
+			return false;
+		return Palindromre(i+1, charr);
+	}
+  public static void main(String[] args) {
+	String s="MlDAM";
+	char[] charr=s.toCharArray();
+	System.out.println(Palindromre(0,charr));
+}
+}
