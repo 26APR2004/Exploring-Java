@@ -1,0 +1,12 @@
+package Form;
+
+public interface Person {
+	
+	 String f_name();
+	 String l_name();
+     default int age()
+     {
+    	 
+		 return 0;
+     }
+}
