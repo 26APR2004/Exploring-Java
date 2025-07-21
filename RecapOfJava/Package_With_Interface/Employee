@@ -1,0 +1,33 @@
+package Form;
+import java.util.Scanner;
+
+public class Employee implements Person {
+	Scanner sc=new Scanner(System.in);
+	
+			
+   @Override
+   public String f_name() {
+	System.out.println("Enter Employee first name:");
+	String Fname=sc.next();
+	return Fname;
+   }
+
+   @Override
+   public String l_name() {
+		System.out.println("Enter Employee last name:");
+		String Lname=sc.next();
+		return Lname;
+   }
+   public int age()
+   {
+	   System.out.println("Enter Employee age:");
+		int ag=sc.nextInt();
+		return ag;
+   }
+
+   public float salary() {
+	   System.out.println("Enter Employee salary:");
+	 		int sal=sc.nextInt();
+	return sal;
+   }
+}
