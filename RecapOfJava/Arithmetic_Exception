@@ -1,0 +1,25 @@
+// Handling Arithmetic Exception
+package Form;
+
+public class Arithmetic_Exception {
+
+	public static void main(String[] args) {
+		  int a=14;
+		  int b=0;
+		  
+		  try {// Exception Occurred
+			  int ans=a/b;
+			  System.out.println(ans);
+		      } 
+		  catch (ArithmeticException e) {
+			  // Exception Handling
+			System.out.println("Arithmetic Exception is Occured..!");
+		      }
+		  finally {
+			    System.out.println("Process is done");
+		      }
+		
+
+	}
+
+}
