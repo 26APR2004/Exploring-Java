@@ -1,0 +1,31 @@
+package Form;
+
+public class Interface_use {
+
+	public static void main(String[] args) {
+		
+		Student s1=new Student();
+		
+        String f_name=s1.f_name();
+        String l_name=s1.l_name();
+        int age_=s1.age();
+        
+        System.out.println(f_name);
+        System.out.println(l_name);
+        System.out.println(age_);
+        
+        Employee E1=new Employee();
+        
+        String F_name=E1.f_name();
+        String L_name=E1.l_name();
+        float salary=E1.salary();
+        int age=E1.age();
+        
+        
+        System.out.println(F_name);
+        System.out.println(L_name);
+        System.out.println(age);
+		System.out.println(salary);
+	}
+
+}
