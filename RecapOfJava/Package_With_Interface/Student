@@ -1,0 +1,24 @@
+package Form;
+
+import java.util.Scanner;
+
+public class Student implements Person{
+
+	Scanner sc=new Scanner(System.in);
+	
+	
+	   @Override
+	   public String f_name() {
+		System.out.println("Enter student first name:");
+		String Fname=sc.next();
+		return Fname;
+	   }
+
+	   @Override
+	   public String l_name() {
+			System.out.println("Enter student last name:");
+			String Lname=sc.next();
+			return Lname;
+	   }
+
+}
