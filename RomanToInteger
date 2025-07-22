@@ -1,0 +1,43 @@
+package Data_Structure;
+import java.util.HashMap;
+import java.util.Scanner;
+public class RomanToInteger {
+	public static int IntToRom(String s)
+	{
+	     HashMap<Character,Integer>H=new HashMap<Character,Integer>();
+	     H.put('I',1);
+	     H.put('V',5);
+	     H.put('X',10);
+	     H.put('L',50);
+	     H.put('C',100);
+	     H.put('D',500);
+	     H.put('M',1000);
+	     
+	     int result=H.get(s.charAt(s.length()-1));
+	     
+	     for(int i=s.length()-2;i>=0;i--)
+	     {
+	    	 if(H.get(s.charAt(i))<H.get(s.charAt(i+1)))
+	    	 {
+	    		 result-=H.get(s.charAt(i));
+	    	 }
+	    	 else
+	    		 result+=H.get(s.charAt(i));
+	    		 
+	     }
+	     
+		return result;
+	}
+
+	public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enter the Roman number:");
+     String s = sc.next();
+     int result=IntToRom(s);
+     System.out.println("Integer value:"+result);
+     
+	}
+
+
+
+}
