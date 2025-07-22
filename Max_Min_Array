@@ -1,0 +1,48 @@
+// Find the Max and Min Elements
+package Data_Structure;
+import java.util.Scanner;
+public class Max_Min_Array {
+	public static int max(int arr[])
+	{
+		int max=0;
+	    for (int i = 0; i < arr.length-1; i++) {
+			if(arr[i]<arr[i+1])
+			{
+				max=arr[i+1];
+			}}
+	    return max;
+		
+	}
+	public static int min(int arr[])
+	{
+		int min=arr[0];
+	    for (int i = 0; i < arr.length-1; i++) {
+			if(arr[i]<min)
+			{
+				min=arr[i];
+			}}
+	    return min;
+		
+	}
+	
+	
+   
+   public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("Enter the size of array:");
+	   int n=sc.nextInt();
+	   
+	   int arr[]= new int[n];
+	   System.out.println("Enter the Array Elements:");
+	   for(int i=0;i<arr.length;i++)
+	   {
+		   arr[i]=sc.nextInt();
+	   }
+	   
+	   
+	    int max=max(arr);
+	    int min=min(arr);
+	    System.out.println("Max:"+max+"\n"+"Min:"+ min);
+	  
+}
+}
