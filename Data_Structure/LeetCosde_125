@@ -1,0 +1,18 @@
+package Data_Structure;
+
+public class LeetCosde_125 {
+ public static boolean isPalindrom(String str)
+ {
+	 str=str.replaceAll("[^A-Za-z0-9]","").toLowerCase();
+	 String rev=new StringBuilder(str).reverse().toString();
+	 return str.equals(rev);
+ }
+	public static void main(String[] args) {
+		String str="A man, a plan, a canal: Panama";
+		
+		
+		System.out.println(isPalindrom(str)); 
+		
+	}
+
+}
