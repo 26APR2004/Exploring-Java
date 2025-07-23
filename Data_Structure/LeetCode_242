@@ -1,0 +1,26 @@
+package Data_Structure;
+
+public class LeetCode_242 {
+  public static boolean isAnagram(String s1,String s2)
+  {
+	  if(s1.length() != s2.length()) return false;
+	  
+	  int []fr=new int[26];
+	  for (char c : s1.toCharArray()) {
+		  fr[c-'a']++;
+		
+	}
+	  for (char c : s2.toCharArray()) {
+		  fr[c-'a']--;
+		  if(fr[c-'a']<0)return false;
+		
+	}
+	  return true;
+  }
+	public static void main(String[] args) {
+		String s1="anagram";
+		String s2="nagaram";
+				System.out.println(isAnagram(s1,s2)); 
+	}
+
+}
