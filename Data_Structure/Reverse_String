@@ -1,0 +1,44 @@
+// Reverse String
+package Data_Structure;
+
+public class Reverse_String {
+	public static void reve_1(String str)
+	{
+		String Revword="";
+		
+		for (int i =str.length()-1 ; i>=0; i--) {
+			Revword+=str.charAt(i);
+		}
+	   System.out.print("Revere String: "+Revword);
+		
+	}
+	
+	public static void reve_2(String str)
+	{
+		char sh[]=str.toCharArray();
+	     
+	     System.out.println("String Before Reverse:");
+	     for (int i = 0; i < sh.length; i++) {
+	    	 System.out.print(sh[i]+" ");
+		}
+	     System.out.println();
+	     for (int i = 0; i < sh.length/2; i++) {
+	    	 char temp=sh[i];
+	    	 sh[i]=sh[sh.length-i-1];
+	    	 sh[sh.length-i-1]=temp;
+	    	 
+		}
+	     System.out.println("String After Reverse:");
+	     for (int i = 0; i < sh.length; i++) {
+			System.out.print(sh[i]+" ");
+		}
+	     System.out.println();
+	}
+	public static void main(String[] args) {
+		String str="hello";
+	     reve_2(str);
+	     reve_1(str);
+	    
+	}
+     
+}
