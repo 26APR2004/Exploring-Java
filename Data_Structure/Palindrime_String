@@ -1,0 +1,29 @@
+// Check the Given String Is palindrome 
+package Data_Structure;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Palindrime_String {
+     public static boolean Palin(String str)
+     {
+    	 String dum=str;
+    	 String Revword="";
+ 		
+ 		for (int i =str.length()-1 ; i>=0; i--) {
+ 			Revword+=str.charAt(i);
+ 		}
+// 		System.out.println(Revword);
+ 	   if(dum==Revword)
+    	 return true;
+ 	   
+ 		   return false;
+     }
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the String:");
+        String str=sc.next();
+        System.out.println("Is It Palindrome:"+Palin(str));
+//        Palin(str);
+   
+	}
+
+}
