@@ -1,0 +1,98 @@
+// LinkedList Data Structur from Scartch
+package Data_Structure;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+ class Node
+{
+	int data;
+	Node link;
+}
+ 
+public class SingliLinkedList {
+	static Node Start=null;
+	static Scanner sc=new Scanner(System.in);
+	public static Node creatNode()
+	{
+		return new Node();
+	}
+	public static void insertNode()
+	{
+		Node temp=creatNode();
+		System.out.println("Enter the Number:");
+		temp.data=sc.nextInt();
+		temp.link=null;
+		if (Start==null) {
+			Start=temp;
+		} 
+		else
+		{
+			Node temp2=Start;
+			while (temp2.link!=null) {
+               temp2=temp2.link;				
+			}
+			temp2.link=temp;
+			}
+	}
+	
+	public static void deleteNode()
+	{
+		if(Start==null)
+		{
+			System.out.println("List is Empty!");
+		}
+		else
+		{
+			Start=Start.link;
+		}
+	}
+	public static void printList()
+	{
+		if(Start==null)
+		{
+			System.out.println("List ia Empty!");
+		}
+		else
+		{
+			Node t2=Start;
+			while (t2!=null) {
+				System.out.println(t2.data+"==>");
+				t2=t2.link;
+				
+			}
+			System.out.println();
+		}
+		
+	}
+	public static void main(String[] args) {
+		
+		SingliLinkedList s=new SingliLinkedList();
+		while(true)
+			{
+			 System.out.println("1.Insert Data\n2.Delete Node\n3.Print List\n4.Exit");
+			 System.out.println("Enter the choice:");
+			 int choice=sc.nextInt();
+			 switch (choice) {
+			case 1:
+				insertNode();
+				break;
+			case 2:
+				deleteNode();
+				break;
+			case 3:
+				printList();
+				break;
+			case 4:
+				System.exit(0);
+				break;
+			default:
+				System.out.println("Invalid Choice");
+				break;
+			}
+			
+			}
+		
+		
+	}
+
+}
