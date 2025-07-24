@@ -1,0 +1,35 @@
+package Data_Structure;
+import java.util.LinkedList;
+public class Linked_List {
+
+	public static void main(String[] args) {
+		   LinkedList<String>list=new LinkedList<String>();
+		   LinkedList<String>list_1=new LinkedList<String>();
+		   list.add("Mango");
+		   list.add("Apple");
+		   list.add("Banan");
+		   list.add("Orange");
+		   list_1.add("DragonFruit");
+		   list_1.addAll(list);  // Marge the two linked list
+		   
+		   list.addFirst("Grapes");
+		   list.addLast("Pinaapple");
+		   
+		   
+		   list.set(0, "Momo");   // replace
+		   list.offer("Mango");
+		   list.pollLast();        // Remove last one 
+		   System.out.println(list_1);
+		   System.out.println(list);
+		   
+		   System.out.println(list.getFirst());
+		   System.out.println(list.getLast());
+		   System.out.println(list.get(1));
+		   
+		   System.out.println(list.indexOf("Mango"));
+		   System.out.println(list.peek());      // upper element get displayed
+		   System.out.println(list.peekLast());   // Lower element get displayed
+		   System.out.println(list.toString());
+	}
+
+}
