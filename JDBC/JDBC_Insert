@@ -1,0 +1,47 @@
+
+
+import java.sql.*;
+public class JDBC_Insert {
+    public static void main(String[] args)  {
+
+        String url = "jdbc:mysql://127.0.0.1:3306/employee";
+        String username = "root";
+        String password = "1111";
+        String querry="INSERT INTO  Part_employee(id,name,age,salary)VALUES (6,'Yash',39,12000.0);";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            System.out.println("Connection of Driver is Successful...");
+        } catch (ClassNotFoundException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Driver Connection Is Failed.!!!1");
+        }
+
+        try {
+
+            Connection con = DriverManager.getConnection(url, username, password);
+            System.out.println("Connection with Data Base successfully Established...");
+            Statement s=con.createStatement();
+           int rawsaffected=s.executeUpdate(querry);
+           if(rawsaffected>0)
+           {
+               System.out.println("Insert Successfully "+rawsaffected+" row(s) affected");
+           }
+           else
+           {
+               System.out.println("Reverse Failed!");
+           }
+           s.close();
+           con.close();
+           System.out.println();
+           System.out.println("Connection Closed Successfully...");
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Data Base Connection is Failed..!");
+        }
+    }
+
+}
+
+
