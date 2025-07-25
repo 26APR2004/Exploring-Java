@@ -1,0 +1,48 @@
+import java.sql.*;    //1. Import the JDBC Package
+public class Reterving_NameOnly {
+    public static void main(String[] args) {
+           String url="jdbc:mysql://127.0.0.1:3306/employee";
+           String username="root";
+           String password="1111";
+           String querry="SELECT * FROM Part_employee";
+
+
+           try
+           {
+               //2. Load or Register the Driver
+               Class.forName("com.mysql.cj.jdbc.Driver");
+           }
+           catch(ClassNotFoundException e) {
+               System.out.println(e.getMessage());
+           }
+
+           try
+           {
+               // 3. Establish a Connection
+               Connection con=DriverManager.getConnection(url,username,password);
+               //4.Create a Statement
+               Statement st=con.createStatement();
+               // 5. Execute SQL Query
+               ResultSet res=st.executeQuery(querry);
+
+               while(res.next())
+               {
+                   System.out.println(res.getString("name"));
+               }
+
+               //6. Close the Connections
+               res.close();
+               st.close();
+               con.close();
+
+           }
+           catch(SQLException e)
+           {
+               System.out.println(e.getMessage());
+           }
+
+
+
+
+    }
+}
