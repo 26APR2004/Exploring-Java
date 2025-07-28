@@ -1,0 +1,25 @@
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.ImageIcon;
+public class JFram_Program1 {
+
+	public static void main(String[] args) {
+	JFrame frame=new JFrame();  // creating object of Frame
+
+	frame.setTitle("Title Of Frame");
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setSize(420,420);// sets the x-dimension and y-dimension of frame
+    frame.setResizable(false);// Prevent frame from resize
+	frame.setVisible(true);  // make frame visible
+	
+	ImageIcon image=new ImageIcon("s_image.png");// It does't changing
+	frame.setIconImage(image.getImage());
+	
+	frame.getContentPane().setBackground(new Color(123,50,250));  // Change the color of background
+
+	
+	
+		MyFrame frame=new MyFrame();
+	}
+
+}
