@@ -1,0 +1,29 @@
+package Data_Structure;
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+public class First_GUI {
+
+	public static void main(String[] args) {
+		ABC obj=new ABC();
+        
+	}
+
+}
+class ABC extends JFrame  // CardLayout
+{
+	ABC()
+	{
+		JLabel l=new JLabel("Hello");
+		JLabel l1=new JLabel(" Brooo");
+		
+		add(l);
+		add(l1);
+		
+		setLayout(new FlowLayout());  // FlowLayout,GridiLayout
+		setSize(400,400);
+		setDefaultCloseOperation(3);
+		setVisible(true);
+	}
+}
