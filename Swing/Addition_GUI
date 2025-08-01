@@ -1,0 +1,70 @@
+ package Data_Structure;
+import java.awt.Component;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+public class Addition_GUI {
+
+	public static void main(String[] args) {
+		new Cal();
+
+	}
+
+}
+class Cal extends JFrame 
+{
+	JTextField f1;
+	JTextField f2;
+	JButton b1,b2;
+	JLabel l;
+	Cal()
+	{
+	        f1=new JTextField(20);   // Text Input Area
+		    f2=new JTextField(20);
+		
+		    b1=new JButton("ADD");
+		    b2=new JButton("SUB");
+		
+		
+		    l=new JLabel("Result");
+		JPanel panel=new JPanel();
+		panel.setLayout(new FlowLayout(FlowLayout.CENTER,15,5));
+		add(f1);
+		add(f2);
+		add(panel);
+		panel.add(b1);
+		panel.add(b2);
+		l.setAlignmentX(Component.CENTER_ALIGNMENT);
+		add(l);
+		// Lambda Expression is applicable for only Functional Interface(One method)
+		b1.addActionListener(ae ->
+		{
+			int num_1=Integer.parseInt(f1.getText());
+			int num_2=Integer.parseInt(f2.getText());
+			
+			int value=num_1+num_2;
+			
+			l.setText(value+" ");	
+		});
+		
+		b2.addActionListener(se->
+		{
+			int num_1=Integer.parseInt(f1.getText());
+			int num_2=Integer.parseInt(f2.getText());
+			
+			int value=num_1-num_2;
+			l.setText(value+" ");
+		});
+		setLayout(new FlowLayout());
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(500,500);
+		setVisible(true);
+	}
+
+	
+}
