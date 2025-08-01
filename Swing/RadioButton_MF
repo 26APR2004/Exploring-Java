@@ -1,0 +1,70 @@
+package Data_Structure;
+
+import java.awt.FlowLayout;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
+public class RadioButton_MF {
+
+	public static void main(String[] args) {
+	  Male_Female_Greeting obj=new Male_Female_Greeting();
+	}
+
+}
+class Male_Female_Greeting extends JFrame
+{
+	 JLabel l;
+	 JButton b;
+	 JRadioButton r1,r2;
+	 JTextField t1;
+	 JCheckBox c1,c2;
+	Male_Female_Greeting()
+	{
+		   t1=new JTextField(15);
+		   r1=new JRadioButton("Male");
+		   r2=new JRadioButton("Female");
+		   b=new JButton("Click");
+		   l=new JLabel("Greeting");
+		   c1=new JCheckBox("Dancing");
+		   c2=new JCheckBox("Singing");
+
+		  ButtonGroup bg=new ButtonGroup();
+		  bg.add(r1);
+		  bg.add(r2);
+		   add(t1);
+		   add(r1);
+		   add(r2);
+		   add(c1);
+		   add(c2);
+		   add(b);
+		   add(l);
+		   
+		   
+		   b.addActionListener(Act->
+		   {
+			   String name=t1.getText();
+			   if(r1.isSelected())
+			   {
+				   name="Mr."+name;   
+			   }
+			   else
+				   name="Ms."+name;
+			   if(c1.isSelected())
+				     name=name+" Dancer";
+			   else
+				   name=name+" Singer";
+			   l.setText(name);
+		   });
+		   setLayout(new FlowLayout());
+		   setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		   setSize(500,500);
+		   setVisible(true);
+	}
+	
+}
