@@ -1,0 +1,59 @@
+package Data_Structure;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JProgressBar;
+import javax.swing.JPanel;
+
+public class CallerClass {
+
+	public static void main(String[] args) {
+		OpenNew obj=new OpenNew();
+	}
+	
+}
+class OpenNew extends JFrame implements ActionListener
+{
+	JButton b;
+	JProgressBar jb;
+	JPanel j;
+	Timer t;
+	int i=0;
+	public OpenNew() {
+		
+		   b=new JButton("Connect");
+		   jb=new JProgressBar(0,20);
+	       j=new JPanel();
+	       t=new Timer(100,this);
+		  
+		  b.addActionListener(at->
+		  {
+			  t.start();  
+		  });
+		  j.add(b);
+		  j.add(jb);
+		  add(j);
+		  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		  setLayout(new FlowLayout());
+		  setSize(500,500);
+	      setVisible(true);
+	}
+	public void actionPerformed(ActionEvent ae)
+	{
+		if(i==20)
+		{
+			new Cal();
+		   dispose();
+		}
+		i++;
+		jb.setValue(i);
+	}
+	{
+		
+	}
+}
