@@ -1,0 +1,35 @@
+// Write a program to create three buttons with caption OK, SUBMIT, CANCEL.
+package Data_Structure;
+import java.io.*;
+import javax.swing.*;
+
+public class  {
+	 Swing_Practice_2()  // Constructor
+	{
+JFrame frame=new JFrame();
+		
+		JButton b1=new JButton("OK");
+		b1.setBounds(150,200,220,50);
+		frame.add(b1);
+		
+		JButton b2=new JButton("SUBMIT");
+		b2.setBounds(150,300,220,50);
+		frame.add(b2);
+		
+		JButton b3=new JButton("CANCEL");
+		b3.setBounds(150,100,220,50);
+		frame.add(b3);
+		
+		
+
+		frame.setLayout(null);
+		frame.setSize(500,500);
+		frame.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		
+  new Swing_Practice_2() ;
+	}
+
+}
