@@ -1,0 +1,19 @@
+package Data_Structure;
+import java.io.*;
+import javax.swing.*;
+public class Swing_Practice_1 {
+
+	public static void main(String[] args) {
+		JFrame frame =new JFrame();
+		JButton button=new JButton("click");
+		button.setBounds(150,200,220,50);
+		frame.add(button);
+		frame.setSize(500,500);
+		frame.setLayout(null);
+		frame.setVisible(true);
+
+	}
+
+	
+
+}
