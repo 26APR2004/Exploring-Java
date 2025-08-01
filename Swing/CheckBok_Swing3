@@ -1,0 +1,49 @@
+// Program to Add Checkbox in the Frame
+package Data_Structure;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JCheckBox;
+public class CheckBok_Swing3 {
+	CheckBok_Swing3()
+	{
+		JFrame frame=new JFrame();
+		
+		JLabel label=new JLabel("Final Year Students Subjects:");
+		label.setBounds(200,000,200,75);
+		frame.add(label);
+		
+		JCheckBox c1=new JCheckBox("Cloud Cumputing");
+		c1.setBounds(150,100,200,50);
+		frame.add(c1);
+		
+		JCheckBox c2=new JCheckBox("Adavanced Web Technology");
+		c2.setBounds(150,200,200,50);
+		frame.add(c2);
+		
+		JCheckBox c3=new JCheckBox("Data Analysis");
+		c3.setBounds(150,300,200,50);
+		frame.add(c3);
+		
+		JCheckBox c4=new JCheckBox("Robotics");
+		c4.setBounds(150,400,200,50);
+		frame.add(c4);
+		
+		JCheckBox c5=new JCheckBox("Soft Skills");
+		c5.setBounds(150,500,200,50);
+		frame.add(c5);
+		
+		
+		
+		
+		frame.setLayout(null);
+		frame.setSize(500,500);
+		frame.setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new CheckBok_Swing3();
+
+	}
+
+}
