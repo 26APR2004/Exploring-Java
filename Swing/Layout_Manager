@@ -1,0 +1,47 @@
+package Swing_Java;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Layout_Manager {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+         JFrame f=new JFrame();
+         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         f.setLayout(new BorderLayout(10,10));
+         f.setSize(500,500);
+         f.setVisible(true);
+         
+         JPanel panel1=new JPanel();
+         JPanel panel2=new JPanel();
+         JPanel panel3=new JPanel();
+         JPanel panel4=new JPanel();
+         JPanel panel5=new JPanel();
+         
+         panel1.setBackground(Color.red);
+         panel2.setBackground(Color.blue);
+         panel3.setBackground(Color.green);
+         panel4.setBackground(Color.orange);
+         panel5.setBackground(Color.lightGray);
+         
+         panel1.setPreferredSize(new Dimension(100,50));
+         panel2.setPreferredSize(new Dimension(100,50));
+         panel3.setPreferredSize(new Dimension(100,50));
+         panel4.setPreferredSize(new Dimension(100,50));
+         panel5.setPreferredSize(new Dimension(100,100));
+         
+         f.add(panel1,BorderLayout.NORTH);
+         f.add(panel2,BorderLayout.SOUTH);
+         f.add(panel3,BorderLayout.WEST);
+         f.add(panel4,BorderLayout.EAST);
+         f.add(panel5,BorderLayout.CENTER);
+         
+         
+	}
+
+}
