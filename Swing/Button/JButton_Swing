@@ -1,0 +1,10 @@
+package Swing_Java;
+
+public class JButton_Swing {
+
+	public static void main(String[] args) {
+		MyFrame_JB obj=new MyFrame_JB();
+
+	}
+
+}
