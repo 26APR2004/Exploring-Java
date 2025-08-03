@@ -1,0 +1,49 @@
+package Swing_Java;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MyFrame_JB extends JFrame implements ActionListener {
+    JButton b;
+	public MyFrame_JB() {
+		// JButton- A button that perform an action when cliked on
+		ImageIcon icon=new ImageIcon("Point.png");
+		b=new JButton();
+		b.setBounds(150, 100, 220, 50);
+		b.setText("Button");
+		b.setFocusable(false);
+		b.addActionListener(this);
+		b.setIcon(icon);
+		b.setHorizontalAlignment(JButton.CENTER);
+		b.setVerticalAlignment(JButton.CENTER);
+		b.setFont(new Font("Arial",Font.BOLD,24));
+		b.setForeground(Color.RED);
+		b.setBackground(Color.YELLOW);
+		b.setBorder(BorderFactory.createEtchedBorder());
+		
+		add(b);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(null);
+		setSize(500,500);
+		 setVisible(true);
+		
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==b)
+		{  
+			System.out.println("Hello");
+			
+		}
+		
+	}
+
+}
