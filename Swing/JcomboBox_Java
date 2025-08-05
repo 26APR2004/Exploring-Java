@@ -1,0 +1,44 @@
+// JComboBox- A component that combines a button or editable field and a drop-down list
+package Swing;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+
+public class JcomboBox_Java extends JFrame implements ActionListener {
+                     
+	public JcomboBox_Java() {
+		
+		String[] animals= {"dog","cat","bird"};
+		JComboBox combox=new JComboBox(animals);
+		
+		combox.addActionListener(e->
+		{
+			System.out.println(combox.getSelectedItem());
+		}) ;
+		
+		combox.setEditable(true);  // Access to edit
+		combox.addItem("Akash");  // add an item
+		combox.removeItem("Akash");
+		add(combox);
+		setLayout(new FlowLayout());
+		pack();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new JcomboBox_Java();
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
