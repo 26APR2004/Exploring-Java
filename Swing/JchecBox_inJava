@@ -1,0 +1,50 @@
+package Swing;
+
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+// JCheckBox 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+
+public class JchecBox_inJava extends JFrame implements ActionListener{
+	JCheckBox check;
+	JButton button;
+	ImageIcon xIcon; // not w
+	public JchecBox_inJava() {
+		
+		xIcon=new ImageIcon("notc.png");// not w
+		 check=new JCheckBox();
+		 button=new JButton("Submit");
+		 check.setText("I'm not a robot");
+		 check.setFont(new Font("Arial", Font.PLAIN, 20));
+		// check.setIcon(xIcon);// not w
+		 // Lambda Expression
+		 button.addActionListener(e->
+		 {
+			System.out.println(check.isSelected());  
+		 });
+		add(check);
+		add(button);
+		setLayout(new FlowLayout());
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		pack();
+	    setVisible(true);
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void main(String[] args) {
+		 new JchecBox_inJava();
+
+	}
+
+}
