@@ -1,0 +1,67 @@
+// JRadio button
+package Swing;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+
+public class RadioButtons_Java extends JFrame implements ActionListener {
+
+	public RadioButtons_Java() {
+		JRadioButton pizzaButton=new JRadioButton("Pizza");
+		JRadioButton handBurgerButton=new JRadioButton("Burger");
+		JRadioButton hotDogButton=new JRadioButton("Hot Dog");
+		ImageIcon icon=new ImageIcon("pizza.png");
+		
+		ButtonGroup menu=new ButtonGroup();
+		menu.add(hotDogButton);
+		menu.add(pizzaButton);
+		menu.add(handBurgerButton);
+		
+		pizzaButton.setIcon(icon);
+		
+		add(hotDogButton);
+		add(pizzaButton);
+		add(handBurgerButton);
+		
+		pizzaButton.addActionListener(e->
+		{
+			System.out.println("Your ordered Pizza");
+		});
+		
+		handBurgerButton.addActionListener(e->
+		{
+			System.out.println("Your ordered Hand Burger");
+		});
+		
+		hotDogButton.addActionListener(e->
+		{
+			System.out.println("Your ordered hot Dog");
+		});
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(new FlowLayout());
+		pack();
+		setVisible(true);
+	}
+
+
+	public static void main(String[] args) {
+		new RadioButtons_Java();
+
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+}
