@@ -1,0 +1,10 @@
+package Swing;
+
+public class Jslider {
+
+	public static void main(String[] args) {
+		new demo_slider();
+
+	}
+
+}
