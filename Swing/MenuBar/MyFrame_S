@@ -1,0 +1,73 @@
+package Swing;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+
+import javax.swing.*;
+import javax.swing.event.*;
+public class MyFrame_S extends JFrame implements ActionListener {
+
+	public MyFrame_S() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(400,400);
+		setLayout(null);
+		
+		
+		JMenuBar menuBar=new JMenuBar();
+		JMenu file=new JMenu("File");
+		JMenu edit=new JMenu("Edit");
+		JMenu help=new JMenu("Help");
+		
+		JMenuItem save=new JMenuItem("Save");
+		JMenuItem saveas=new JMenuItem("Save As..");
+		JMenuItem openfile=new JMenuItem("Open File");
+		JMenuItem exit=new JMenuItem("Exit");
+		
+		
+		save.addActionListener(e->
+		{
+			System.out.println("File is Saved..!");
+		});
+		saveas.addActionListener(e->
+		{
+			System.out.println("File is Saved As..!");
+		});
+		openfile.addActionListener(e->
+		{
+			System.out.println("File is Opened..!");
+		});
+		exit.addActionListener(e->
+		{
+			System.exit(0);
+		});
+		
+	
+		file.setMnemonic(KeyEvent.VK_F);// F+Alt for file shortKey
+		edit.setMnemonic(KeyEvent.VK_E);// E+Alt for edit shortKey
+		help.setMnemonic(KeyEvent.VK_H);// H+Alt for help shortKey
+		save.setMnemonic(KeyEvent.VK_S);   // S for save shortKey
+		saveas.setMnemonic(KeyEvent.VK_A);// A for saveas shortKey
+		openfile.setMnemonic(KeyEvent.VK_O);// O for openfile shortKey
+		exit.setMnemonic(KeyEvent.VK_E);// E for exit shortKey
+		
+		file.add(save);
+		file.add(saveas);
+		file.add(openfile);
+		file.add(exit);
+		
+		menuBar.add(file);
+		menuBar.add(edit);
+		menuBar.add(help);
+		
+		setJMenuBar(menuBar);
+		setVisible(true);
+		}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
