@@ -1,0 +1,10 @@
+package Swing;
+
+public class OpeningFile {
+
+	public static void main(String[] args) {
+		new MyDriver_file();
+
+	}
+
+}
