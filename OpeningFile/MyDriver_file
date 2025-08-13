@@ -1,0 +1,43 @@
+package Swing;
+
+import java.awt.event.*;
+import java.io.File;
+import java.awt.*;
+import javax.swing.*;
+
+public class MyDriver_file extends JFrame implements ActionListener{
+
+	public MyDriver_file() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(400,400);
+		setLayout(new FlowLayout());
+		JButton button=new JButton("Select");
+		
+		// Lambda expression
+		button.addActionListener(e->
+		{
+			
+			JFileChooser filechoose=new JFileChooser();
+			
+			filechoose.setCurrentDirectory(new File("."));
+//			int response=filechoose.showOpenDialog(null);
+			int response=filechoose.showSaveDialog(null);
+			if(response==JFileChooser.APPROVE_OPTION)
+			{
+				 File file=new File(filechoose.getSelectedFile().getAbsolutePath());
+				 System.out.println(file);
+			}
+		      
+			
+		});
+		add(button);
+		setVisible(true);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
