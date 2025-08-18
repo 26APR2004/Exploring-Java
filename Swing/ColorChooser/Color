@@ -1,0 +1,40 @@
+package Swing;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+public class Color extends JFrame implements ActionListener {
+  private static java.awt.Color white;
+  private static java.awt.Color black;
+  JButton button;
+  JLabel label;
+	public Color() {
+		  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		  setLayout(new FlowLayout());
+		  
+		  button=new JButton("Pick a color:");
+		  button.addActionListener(this);
+		  
+		  label=new JLabel();
+		  label.setBackground(Color.white);
+		  label.setText("Hello !");
+		  label.setFont(new Font("MV Boli",Font.PLAIN,100));
+		  label.setOpaque(true);
+		  
+		  add(button);
+		  add(label);
+		  pack();
+		  setVisible(true);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+	if(e.getSource()==button)
+	{
+		JColorChooser color=new JColorChooser();
+		java.awt.Color c=JColorChooser.showDialog(null, "Pick a color:", Color.black);
+		label.setForeground(c);
+	}
+		
+	}
+
+}
